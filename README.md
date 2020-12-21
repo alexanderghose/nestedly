@@ -5,7 +5,9 @@ totally not a contactually clone
 1. git clone + cd into the nestedly folder & do "npm install"
 1. in powershell (can't be Git Bash), type: "expo login" and put in your expo email/pw from step 1:
 
-PS C:\Users\alex\source\repos\nestedly> expo login                                                       ```┌─────────────────────────────────────────────────────────────────────────┐
+PS C:\Users\alex\source\repos\nestedly> expo login                                                       
+```js
+┌─────────────────────────────────────────────────────────────────────────┐
 │                                                                         │
 │   There is a new version of expo-cli available (4.0.15).                │
 │   You are currently using expo-cli 4.0.13                               │
