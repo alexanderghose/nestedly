@@ -23,5 +23,5 @@ Success. You are now logged in as [censored].
 
 4. finally, type "npm start", and once the QR code screen pops up, you should be able to view the app either in (1) your EXPO CLIENT in iOS, or (2) in the web browser, or (3) android. 
 
-### As of writing (2020-12-19), it doesn't build on iOS, not sure about android, but does work in the web browser:
+### As of writing (2020-12-19), this setup doesn't build on iOS, but Works on android, and the web browser:
 <img src="screencap.png">
