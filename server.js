@@ -2,11 +2,15 @@ const express = require('express');
 const path = require('path');
 //const favicon = require('serve-favicon');
 const logger = require('morgan');
+require('./config/database');
 
 const app = express();
-
 app.use(logger('dev'));
 app.use(express.json());
+
+// routers
+let apiRouter = require('./routes/api');
+app.use('/api', apiRouter);
 
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work 
