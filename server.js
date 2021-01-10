@@ -1,12 +1,30 @@
 const express = require('express');
 const path = require('path');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var passport = require('passport');
+
 //const favicon = require('serve-favicon');
 const logger = require('morgan');
-require('./config/database');
+
+// load the env vars
+require('dotenv').config();
+
+require('./config/database'); // connect to mongoDB
+require('./config/passport'); // conigure passportJS
+
 
 const app = express();
 app.use(logger('dev'));
 app.use(express.json());
+app.use(cookieParser());
+app.use(session({
+  secret: 'c7a3bb86-13cd-4a02-87e9-c3b5baa41d7b',
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // routers
 let apiRouter = require('./routes/api');
