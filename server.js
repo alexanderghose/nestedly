@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+var bodyParser = require('body-parser')
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
@@ -15,6 +16,7 @@ require('./config/passport'); // conigure passportJS
 
 
 const app = express();
+app.use(bodyParser());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
