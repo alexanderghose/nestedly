@@ -1,6 +1,12 @@
 totally not a contactually clone
+## Instructions to Run Server
+1. nodemon server.js
+1. in a browser, type localhost:3001 to see a list of working backend features
+1. To add a contact, navigate on your browser to http://localhost:3001/api/contacts/create
+1. To add a nest, navigate on your browser to http://localhost:3001/api/nests/create
 
-## Instructions to Run on MacOS.
+
+## Instructions to Run Client on MacOS.
 1. download the "Expo Client" app from Play store/App store & signup/Login with email/pw
 1. git clone + cd into the nestedly folder & do "npm install"
 1. in powershell (can't be Git Bash), type: "expo login" and put in your expo email/pw from step 1:
