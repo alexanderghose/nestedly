@@ -2,7 +2,8 @@ totally not a contactually clone
 ## Instructions to Run Server
 1. nodemon server.js
 1. in a browser, type localhost:3001/api/contacts
-1. To add a contact, hit http://localhost:3001/api/testCreateForm
+1. To add a contact, hit http://localhost:3001/api/testCreateContact
+1. To add a nest, hit http://localhost:3001/api/testCreateNest
 
 
 ## Instructions to Run Client on MacOS.
