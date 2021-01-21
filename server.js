@@ -35,7 +35,13 @@ app.use('/api', apiRouter);
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work 
 app.get('/*', function(req, res) {
-   res.send("hello, this is a catchall route.")
+    let html = "hello, this is a catchall route until we have a frontend.<br><br>"
+    html += "currently you can access teh following links:<br>"
+    html += "<a href='/api/contacts'>/api/contacts</a><br>"
+    html += "<a href='/api/contacts/create'>/api/contacts/create</a><br>"
+    html += "<a href='/api/nests'>/api/nests</a><br>"
+    html += "<a href='/api/nests/create'>/api/nests/create</a><br>"
+    res.send(html)
   //res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 

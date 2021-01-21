@@ -3,7 +3,11 @@ const Schema = mongoose.Schema;
 
 const nestSchema = new Schema({
   name: String,
-  contactFrequencyInDays: Number,
+  frequency: Number, // contact frequency for each member of this nest (in days)
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }
 }, {
   timestamps: true
 });
