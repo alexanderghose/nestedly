@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/nestedly',
+mongoose.connect(process.env.DB_URL,
   { useNewUrlParser: true, 
     useUnifiedTopology: true
    }
