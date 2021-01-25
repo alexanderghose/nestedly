@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %>
+
+<% for (let contact of contacts) { %>
+    <div class="card" style="width:300px">
+        <div class="card-body">
+            <h4 class="card-title"><%= contact.name %><br></h4>
+            <p class="card-text">Last Contacted: <%= contact.lastContacted.toLocaleDateString() %>.</p>
+            <a href="/api/contacts/<%= contact.id %>" class="btn btn-primary">See Profile</a>            
+        </div>
+    </div>
+<% } %>
+
+</body>
+</html>

@@ -13,19 +13,13 @@ let UserModel = require('../models/user')
 // 3. Routes for backend testing
 
 /**
- * 1. CRUD Routes (for front-end AJAX to hit).
+ * 1. CRUD Routes (for front-end AJAX to hit). Return JSON
  */
 
 router.get('/', async function(req,res) {
-    let html = "hello, this is the api root route until we have a frontend.<br><br>"
-    html += "currently you can access teh following links:<br>"
-    html += "<a href='/api/contacts'>/api/contacts</a><br>"
-    html += "<a href='/api/contacts/create'>/api/contacts/create</a><br>"
-    html += "<a href='/api/nests'>/api/nests</a><br>"
-    html += "<a href='/api/nests/create'>/api/nests/create</a><br>"
-    res.send(html)
+    console.log(req.user)
+    res.render('home.ejs', {user: req.user})
 })
-
 
 router.get('/contacts', async function(req,res) {
     if(req.isAuthenticated()) {
@@ -36,6 +30,7 @@ router.get('/contacts', async function(req,res) {
         res.send("cannot get contacts. please <a href='/api/auth/google'>login</a>.")
     }
 })
+
 router.post('/contacts', function(req,res) { // create a contact.
     if (req.isAuthenticated()) {
         req.user.contacts.push(req.body);
@@ -89,7 +84,7 @@ router.get('/oauth2callback', passport.authenticate( // Google OAuth callback ro
 ));
 router.get('/logout', function(req, res){ // OAuth logout route
     req.logout();
-    res.redirect('/api/contacts');
+    res.redirect('/');
 });
 
 /**
@@ -123,6 +118,33 @@ router.get('/contacts/create', async function(req,res) {
     }
 })
 
+router.get('/contacts/:id/edit', async function(req,res) {
+    if (req.user) {
+        // fetch all this user's nests
+        let myNests = await NestModel.find({user:req.user})
+        let contact = req.user.contacts.find(contact => contact.id == req.params.id)
+        console.log(req.params.id)
+        console.log(contact)
+        let html = "<form action='/api/contacts/"+contact.id+"/edit' method='POST'>"
+        html += "Edit contact belonging to user " + req.user.name + ":<br />"
+        html += "Name <input name='name' placeholder='"+ contact.name +"'/><br />"
+        html += "Phone <input name='phone' placeholder='"+ contact.phone +"' /><br />"
+        html += "Email <input name='email' placeholder='"+ contact.email +"' /><br />"
+        html += "Last contacted <input name='lastContacted' type='date' value='"+ contact.lastContacted.toISOString().substr(0,10) +"' /><br />"
+        html += "Nest <select name='nest'>"
+        for (let nest of myNests) {
+            html += "<option value="+ nest.id +">"+nest.name+"</option>"
+        }
+        html += "</select> (... to add a Nest, click <a href='/api/nests/create'>here</a>)<br />"
+        html += "Notes about this contact <textarea name='notes'  placeholder='"+ contact.notes +"'></textarea><br />"
+        html += "<button>Edit</button>"
+        html += "</form>"
+        res.send(html)
+    } else {
+        res.send("cannot show you the add contact form. please <a href='/api/auth/google'>login</a>.")
+    }
+})
+
 router.get('/nests/create', async function(req,res) {
     if (req.user) {
         // fetch all this user's nests
@@ -135,6 +157,32 @@ router.get('/nests/create', async function(req,res) {
         res.send(html)
     } else {
         res.send("cannot show you the add contact form. please <a href='/api/auth/google'>login</a>.")
+    }
+})
+
+router.get('/contacts/HTML', async function(req,res) {
+    if(req.isAuthenticated()) {
+        //let currentUser = await UserModel.findById(req.user.id)
+        res.render('contacts.ejs', { 
+            user: req.user, 
+            contacts: req.user.contacts })
+    } else {
+        res.send("cannot get contacts. please <a href='/api/auth/google'>login</a>.")
+    }
+})
+
+router.get('/contacts/:id', async function(req,res) {
+    if(req.isAuthenticated()) {
+        let contact = req.user.contacts.find(ele => req.params.id == ele.id)
+        console.log(req.params.id)
+        console.log(contact)
+        let nest = await NestModel.findById(contact.nest)
+        console.log(nest)
+        res.render('contactshow.ejs', {user:req.user, 
+            contact, 
+            nest})
+    } else {
+        res.send("cannot get contacts. please <a href='/api/auth/google'>login</a>.")
     }
 })
 
