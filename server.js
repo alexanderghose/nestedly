@@ -1,3 +1,4 @@
+const cors = require('cors');
 const express = require('express');
 const path = require('path');
 var bodyParser = require('body-parser')
@@ -18,6 +19,7 @@ require('./config/passport'); // conigure passportJS
 const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser());
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
