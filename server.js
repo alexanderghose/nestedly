@@ -1,3 +1,4 @@
+const cors = require('cors');
 const express = require('express');
 const path = require('path');
 var bodyParser = require('body-parser')
@@ -16,7 +17,9 @@ require('./config/database'); // connect to mongoDB
 
 
 const app = express();
+app.set('view engine', 'ejs');
 app.use(bodyParser());
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
@@ -35,14 +38,7 @@ app.use('/api', apiRouter);
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work 
 app.get('/*', function(req, res) {
-    let html = "hello, this is a catchall route until we have a frontend.<br><br>"
-    html += "currently you can access teh following links:<br>"
-    html += "<a href='/api/contacts'>/api/contacts</a><br>"
-    html += "<a href='/api/contacts/create'>/api/contacts/create</a><br>"
-    html += "<a href='/api/nests'>/api/nests</a><br>"
-    html += "<a href='/api/nests/create'>/api/nests/create</a><br>"
-    res.send(html)
-  //res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.redirect('/api')
 });
 
 // Configure to use port 3001 instead of 3000 during

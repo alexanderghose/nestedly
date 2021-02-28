@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+
+<div class="card" style="width:300px">
+    <div class="card-body">
+        <h4 class="card-title"><%= contact.name %><br></h4>
+        <p class="card-text">Last Contacted: <%= contact.lastContacted.toLocaleDateString() %>.</p>
+        <p class="card-text">Nest: <%= nest.name %>.</p>
+        <a href="/api/contacts/<%= contact.id %>/edit" class="btn btn-primary">Update</a>            
+    </div>
+</div>
+
+</body>
+</html>
