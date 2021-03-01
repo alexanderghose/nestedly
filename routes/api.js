@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 let apiCtrl = require('../controllers/api')
 
+// full route be like POST /api/contacts
 router.get('/contacts', apiCtrl.getContacts)
 router.post('/contacts', apiCtrl.postContact)
 

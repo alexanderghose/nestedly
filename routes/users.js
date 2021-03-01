@@ -5,7 +5,7 @@ const usersCtrl = require('../controllers/users');
 
 /*---------- Public Routes ----------*/
 
-// full address be like /api/users/signup or /api/users/login
+// full address be like POST /api/users/signup or /api/users/login
 router.post('/signup', usersCtrl.signup);
 router.post('/login', usersCtrl.login);
 

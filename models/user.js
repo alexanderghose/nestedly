@@ -11,7 +11,15 @@ let userSchema = new mongoose.Schema({
     contacts: [contactsSchema],
     dashboardOptions: [String], // todo: reference option 4eef2= sort by industry
     emailTemplates: [String],
-    reminders: []
+    reminders: [{
+      when: Date,
+      thing: String,
+    }],
+    autoEmails: [{
+      when: Date,
+      message: String,
+      to: String,
+    }],
     // relics from OAuth:
     //avatar: String,
     //googleId: String
