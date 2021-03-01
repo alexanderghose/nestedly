@@ -10,9 +10,9 @@
 <body>
     <nav>
         <% if (user) { %>
-            Hello, <%= user.name %>. <a href="https://nestedly.com/api/logout">Logout</a>
+            Hello, <%= user.name %>. <a href="/api/users/logout">Logout</a>
         <% } else { %>
-            <a href="https://nestedly.com/api/auth/google">Login</a>    
+            <a href="/api/loginFormHTML">Login</a>
         <% } %>
         
     </nav>

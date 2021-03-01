@@ -31,8 +31,12 @@ app.use(cookieParser());
 // app.use(passport.initialize());
 // app.use(passport.session());
 
+
 // routers
+let usersRouter = require('./routes/users');
 let apiRouter = require('./routes/api');
+app.use('/api/users', usersRouter);
+app.use(require('./config/auth')); // <-- middleware adds a "req.user" if the user is logged in. deliberately placed after api/users which houses all the login/signup functions where we assume there is no req.user
 app.use('/api', apiRouter);
 
 // The following "catch all" route (note the *)is necessary
