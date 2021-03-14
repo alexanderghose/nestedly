@@ -40,4 +40,3 @@ module.exports = router;
 //     req.logout();
 //     res.redirect('/api/contacts');
 // });
-
