@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 let apiCtrl = require('../controllers/api')
 
+router.get('/', apiCtrl.home)
+
 /*---------- Protected Routes ----------*/
 router.use(require('../config/auth')); // <------- auth middleware: grabs the JWT
                                           // <------- from the req.body and creates "req.user"
@@ -20,7 +22,6 @@ module.exports = router;
 // router.get('/test/contacts', apiCtrl.testGetContacts)
 
 // // for testing posting via home.ejs (in a browser -- old)
-// router.get('/', apiCtrl.home)
 // router.get('/contacts/create', apiCtrl.getHTMLCreateContactForm)
 // router.get('/contacts/:id/edit', apiCtrl.getHTMLEditContactForm)
 // router.get('/nests/create', apiCtrl.getHTMLCreateNestForm)

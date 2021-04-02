@@ -91,9 +91,9 @@ function testGetNests(req,res) {
 
 async function getContacts(req,res) {
     if(req.user) {
-        //let currentUser = await UserModel.findById(req.user.id)
-        let userContacts = req.user.contacts;
-        res.json(userContacts)
+        let currentUser = await UserModel.findById(req.user._id)
+        console.log(currentUser.contacts)
+        res.json(currentUser.contacts)
     } else {
         res.send("cannot get contacts. please <a href='/api/auth/google'>login</a>.")
     }
