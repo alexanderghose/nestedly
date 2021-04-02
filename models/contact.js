@@ -6,10 +6,10 @@ const contactSchema = new Schema({
   lastContacted: Date,
   phone: String,
   email: String,
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
-  },
+  // user: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'User'
+  // },
   nest: {type: Schema.Types.ObjectId, ref: 'Nest'},
   industry: String, // this is apparently useful for the dashboard, to be able to quickly see what kind of user they are
   notes: String,

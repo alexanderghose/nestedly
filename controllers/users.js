@@ -21,8 +21,12 @@ module.exports = {
   async function login(req, res) {
     try {
       const user = await User.findOne({email: req.body.email});
-      if (!user) return res.status(401).json({err: 'No account associated with this email'});
-      user.comparePassword(req.body.pw, (err, isMatch) => {
+      //Temporarily altered the error message from 
+      //({err: `No account associated with the current email})
+      // to 
+      //({err: req.body})
+      if (!user) return res.status(401).json({err: req.body});
+      user.comparePassword(req.body.password, (err, isMatch) => {
         if (isMatch) {
           const token = createJWT(user);
           res.json({token});

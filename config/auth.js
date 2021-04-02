@@ -14,6 +14,7 @@ module.exports = function(req, res, next) {
   if (token) {
     // Remove the 'Bearer ' if it was included in the token header
     token = token.replace('Bearer ', '');
+    console.log("received incoming token", token)
     // Check if token is valid and not expired
     jwt.verify(token, SECRET, function(err, decoded) {
       if (err) {

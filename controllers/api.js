@@ -100,12 +100,16 @@ async function getContacts(req,res) {
 }
 
 async function postContact(req,res) { // create a contact.
+    console.log("received POST for contacts", req.body)
+    console.log("user:", req.user)
     if (req.user) {
-        let user = UserModel.findById(req.user.id)
+        let user = await UserModel.findById(req.user._id)
+        console.log("found user", user)
         user.contacts.push(req.body);
-        user.save(function(err) {
-            res.redirect('/api/contacts');
-        });
+        console.log("push successful")
+        await user.save();
+        console.log("save successful")
+        res.json(user.contacts);
     } else {
         res.send("cannot create contact. please <a href='/api/auth/google'>login</a>.")
     }
