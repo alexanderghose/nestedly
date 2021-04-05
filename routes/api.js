@@ -15,6 +15,8 @@ router.post('/contacts', apiCtrl.postContact)
 router.get('/nests', apiCtrl.getNests)
 router.post('/nests', apiCtrl.postNest)
 
+router.post('/assign_nest_to_contact', apiCtrl.assignNestToContact)
+
 module.exports = router;
 
 // // test routes for testing AJAX (before we'd setup jwts)

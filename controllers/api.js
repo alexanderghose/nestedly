@@ -142,6 +142,27 @@ async function postNest(req,res) { // create a nest.
     }
 }
 
+// given a req.body.contactID and req.body.nestID, assign contact to nest
+async function assignNestToContact(req,res) {
+    if (req.user) {
+        // step 1. find the user
+        let userModel = await NestModel.find({user: req.user.id})
+        for (let i = 0; i < userModel.contacts.length; i++) {
+            // step 2. find the contact
+            if (userModel.contacts[i].id == req.body.contactID) {
+                // step 3. modify this contact's nestID to contact.
+                contacts[i].nest = req.body.nestID;
+                await userModel.save()
+                return res.json("ok")
+            }
+        }
+        return res.json("error - could not assign nest to contact")
+    } else {
+        res.send("cannot assign contact to nest. please login.")
+    }
+}
+
+
 async function getHTMLEditContactForm(req,res) {
     if (req.user) {
         // fetch all this user's nests
@@ -244,6 +265,7 @@ module.exports = {
     postContact,
     getNests,
     postNest,
+    assignNestToContact,
     getContactsAsHTML,getOneContactAsHTML,
     getHTMLCreateContactForm,getHTMLCreateNestForm,getHTMLEditContactForm,
 

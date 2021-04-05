@@ -56,6 +56,10 @@ app.use('/api', apiRouter);
 
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work 
+app.get('/test', function(req, res) {
+  res.sendFile(path.join(__dirname, './public/shade_web_template', 'index.html'));
+});
+
 app.get('/*', function(req, res) {
   res.redirect('/api')
 });
