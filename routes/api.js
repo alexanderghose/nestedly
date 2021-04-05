@@ -15,6 +15,10 @@ router.post('/contacts', apiCtrl.postContact)
 router.get('/nests', apiCtrl.getNests)
 router.post('/nests', apiCtrl.postNest)
 
+// full route: POST /api/assign_nest_to_contact    has the following prereqs:
+// (1) logged in user
+// (2) needs a req.body.contactID
+// (3) needs a req.body.nestID
 router.post('/assign_nest_to_contact', apiCtrl.assignNestToContact)
 
 module.exports = router;
