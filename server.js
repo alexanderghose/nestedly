@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 var bodyParser = require('body-parser')
 var cookieParser = require('cookie-parser');
+
 var session = require('express-session');
 var passport = require('passport');
 
@@ -18,6 +19,7 @@ require('./config/database'); // connect to mongoDB
 
 const app = express();
 app.set('view engine', 'ejs');
+app.use(express.static('public'))
 app.use(bodyParser());
 app.use(cors());
 // Add some more CORS headers
@@ -56,13 +58,13 @@ app.use('/api', apiRouter);
 
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work 
-app.get('/test', function(req, res) {
-  res.sendFile(path.join(__dirname, './public/shade_web_template', 'index.html'));
+app.get('/', function(req, res) {
+  res.render('index.ejs');
 });
 
-app.get('/*', function(req, res) {
-  res.redirect('/api')
-});
+// app.get('/*', function(req, res) {
+//   res.redirect('/api')
+// });
 
 // Configure to use port 3001 instead of 3000 during
 // development to avoid collision with React's dev server
