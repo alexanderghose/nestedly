@@ -6,12 +6,17 @@ const nestSchema = new Schema({
   frequency: Number, // contact frequency for each member of this nest (in days)
   colour: String,
   tags: [String],
-  user: {
+  user: [{
     type: Schema.Types.ObjectId,
     ref: 'User'
-  }
+  }]
 }, {
   timestamps: true
 });
 
-module.exports = mongoose.model('Nest', nestSchema);
+let NestModel = mongoose.model('Nest', nestSchema);
+
+module.exports = {
+  NestModel,
+  nestSchema,
+}

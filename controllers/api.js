@@ -1,7 +1,8 @@
 const express = require('express');
-let NestModel = require('../models/nest')
-let ContactModel = require('../models/contact').ContactModel
-let UserModel = require('../models/user')
+let NestModel = require('../models/nest');
+let ContactModel = require('../models/contact').ContactModel;
+let UserModel = require('../models/user');
+const User = require('../models/user');
 
 module.exports = {
     getContacts,
@@ -9,10 +10,11 @@ module.exports = {
     getNests,
     postNest,
     assignNestToContact,
+    AddOneNest
 }
 
-async function getContacts(req,res) {
-    if(req.user) {
+async function getContacts(req, res) {
+    if (req.user) {
         let currentUser = await UserModel.findById(req.user._id)
         console.log(currentUser.contacts)
         res.json(currentUser.contacts)
@@ -21,7 +23,7 @@ async function getContacts(req,res) {
     }
 }
 
-async function postContact(req,res) { // create a contact.
+async function postContact(req, res) { // create a contact.
     console.log("received POST for contacts", req.body)
     console.log("user:", req.user)
     if (req.user) {
@@ -37,38 +39,63 @@ async function postContact(req,res) { // create a contact.
     }
 }
 
-async function getNests(req,res) {
-    if(req.user) {
+//AddOneNest - Add a Nest Model to a User Model
+async function AddOneNest(req, res) {
+    try {
+        let user = await UserModel.findById(req.body.userID)
+        user.nests.push(req.body.nest)
+        await user.save();
+        res.send(user)
+    }
+    catch (err) {
+        res.send(err)
+    }
+}
+
+//April 10th - Refactored this to look inside the body of requests instead of at a user header
+//Assert "user without assigned nests" - Expected "[]" -Got "[]"
+async function getNests(req, res) {
+    if (req.body.user) {
         //let currentUser = await UserModel.findById(req.user.id)
-        let userNests = await NestModel.find({user: req.user.id})
+        console.log(req.body.user)
+        let userNests = await NestModel.find({ user: req.body.id })
         res.json(userNests)
     } else {
         res.send("cannot get nests. please <a href='/api/auth/google'>login</a>.")
     }
 }
 
-async function postNest(req,res) { // create a nest.
-    if (req.user) {
+//April 10th - Refactored this to look inside the body of requests instead of at a user header
+async function postNest(req, res) { // create a nest.
+    try {
         let result = await NestModel.create({
             name: req.body.name,
             frequency: req.body.frequency,
-            user: req.user.id,
+            user: {
+                type: UserModel,
+                ref: req.body.id
+            }
         });
-        console.log("created:", result)
-        res.redirect('/api/nests')
+        res.json(
+            {
+                Status: "Nest Added",
+                Nest: result
+            }
+        );
+        // res.redirect('/api/nests')
         // req.user.save(function(err) {
         // res.redirect('/api/contacts');
         // });
-    } else {
-        res.send("cannot create nest. please <a href='/api/auth/google'>login</a>.")
+    } catch (err) {
+        res.send(err)
     }
 }
 
 // given a req.body.contactID and req.body.nestID, assign contact to nest
-async function assignNestToContact(req,res) {
+async function assignNestToContact(req, res) {
     if (req.user) {
         // step 1. find the user
-        let userModel = await NestModel.find({user: req.user.id})
+        let userModel = await NestModel.find({ user: req.user.id })
         for (let i = 0; i < userModel.contacts.length; i++) {
             // step 2. find the contact
             if (userModel.contacts[i].id == req.body.contactID) {

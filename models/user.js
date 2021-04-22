@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-let contactsSchema = require('./contact').contactSchema
+let nestSchema = require('./nest').nestSchema;
 const bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
@@ -8,7 +8,8 @@ let userSchema = new mongoose.Schema({
     name: String,
     email: {type: String, required: true, lowercase: true, unique: true},
     password: String,
-    contacts: [contactsSchema],
+    // Test Code
+    nests: [nestSchema],
     dashboardOptions: [String], // todo: reference option 4eef2= sort by industry
     emailTemplates: [String],
     reminders: [{
