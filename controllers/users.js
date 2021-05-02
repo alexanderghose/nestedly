@@ -41,8 +41,12 @@ module.exports = {
   /*----- Helper Functions -----*/
   
   function createJWT(user) {
+    let token_contents = {
+       _id: user._id,
+       email: user.email,
+    }
     return jwt.sign(
-      {user}, // data payload
+      {user: token_contents}, // data payload
       SECRET,
       {expiresIn: '24h'}
     );
