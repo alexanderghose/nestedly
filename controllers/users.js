@@ -10,8 +10,7 @@ module.exports = {
     const user = new User(req.body);
     try {
       await user.save();
-      const token = createJWT(user);
-      res.json({ token });
+      res.json({ token: createJWT(user) });
     } catch (err) {
       // Probably a duplicate email
       res.status(400).json(err);
