@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user');
 const usersCtrl = require('../controllers/users');
 
 /*---------- Public Routes ----------*/
@@ -8,7 +7,6 @@ const usersCtrl = require('../controllers/users');
 // full address: POST /api/users/signup  and POST /api/users/login
 router.post('/signup', usersCtrl.signup);
 router.post('/login', usersCtrl.login);
-
 
 
 module.exports = router;

@@ -19,7 +19,7 @@ router.post('/nests', apiCtrl.AddOneNest)
 // (3) needs a req.body.nestID
 router.post('/assign_nest_to_contact', apiCtrl.assignNestToContact)
 
-
+router.post('/fetchUserData',  apiCtrl.fetchUserData)
 
 // test stuff: ignore
 let SkillModel = require('../models/skill');

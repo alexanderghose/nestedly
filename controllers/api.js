@@ -10,7 +10,8 @@ module.exports = {
     getNests,
     postNest,
     assignNestToContact,
-    AddOneNest
+    AddOneNest, 
+    fetchUserData,
 }
 
 async function getContacts(req, res) {
@@ -107,6 +108,17 @@ async function assignNestToContact(req, res) {
         return res.json("error - could not assign nest to contact")
     } else {
         res.send("cannot assign contact to nest. please login.")
+    }
+}
+
+async function fetchUserData(req, res) { // create a contact.
+    try {
+        let user = await UserModel.findById(req.body.userID);
+        
+        res.send(user)
+    }
+    catch (err) {
+        res.send(err)
     }
 }
 
