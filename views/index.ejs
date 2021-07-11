@@ -1,603 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Landing Page Template</title>
-  <link rel="shortcut icon" href="image/png/favicon.png" type="image/x-icon">
-  <!-- Bootstrap , fonts & icons  -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="fonts/icon-font/css/style.css">
-  <link rel="stylesheet" href="fonts/typography-font/typo.css">
-  <link rel="stylesheet" href="fonts/typography-font/lucida-grande/typo.css">
-  <link rel="stylesheet" href="fonts/fontawesome-5/css/all.css">
-  <!-- Plugin'stylesheets  -->
-  <link rel="stylesheet" href="plugins/aos/aos.min.css">
-  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="plugins/nice-select/nice-select.min.css">
-  <link rel="stylesheet" href="plugins/slick/slick.min.css">
-  <!-- Vendor stylesheets  -->
-  <link rel="stylesheet" href="./plugins/theme-mode-switcher/switcher-panel.css">
-  <link rel="stylesheet" href="css/main.css">
-  <!-- Custom stylesheet -->
-</head>
-
-<body data-theme="light">
-  <div class="site-wrapper overflow-hidden">
-    <!-- Header start  -->
-    <!-- Header Area -->
-    <header class="site-header site-header--menu-right sticky-bg-white light-mode-texts menu-link-hover-black site-header--absolute site-header--sticky">
-      <div class="container">
-        <nav class="navbar site-navbar offcanvas-active navbar-expand-lg px-0">
-          <!-- Brand Logo-->
-          <div class="brand-logo d-inline-block">
-            <a href="index.html">
-              <!-- light version logo (logo must be black)-->
-              <img src="./image/png/logo-black.png" alt="">
-              <!-- Dark version logo (logo must be White)-->
-            </a>
-          </div>
-          <div class="collapse navbar-collapse" id="mobile-menu">
-            <div class="navbar-nav-wrapper">
-              <ul class="navbar-nav main-menu">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle gr-toggle-arrow" id="navbarDropdown" href="#features" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Demos <i class="icon icon-small-down"></i></a>
-                  <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li class="drop-menu-item">
-                      <a href="#">
-                        Dropdown 01
-                      </a>
-                    </li>
-                    <li class="drop-menu-item">
-                      <a href="#">
-                        Dropdown 02
-                      </a>
-                    </li>
-                    <li class="drop-menu-item">
-                      <a href="#">
-                        Dropdown 03
-                      </a>
-                    </li>
-                    <li class="drop-menu-item">
-                      <a href="#">
-                        Dropdown 04
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://finestdevs.com/product-support/" role="button" aria-expanded="false">Support</a>
-                </li>
-              </ul>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page for Nestedly</title>
+    <link rel="shortcut icon" href="image/png/favicon.png" type="image/x-icon">
+    <!-- Bootstrap , fonts & icons  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/icon-font/css/style.css">
+    <link rel="stylesheet" href="fonts/typography-font/typo.css">
+    <link rel="stylesheet" href="fonts/typography-font/lucida-grande/typo.css">
+    <link rel="stylesheet" href="fonts/fontawesome-5/css/all.css">
+    <!-- gooogle fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Plugin'stylesheets  -->
+    <link rel="stylesheet" href="plugins/aos/aos.min.css">
+    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="plugins/nice-select/nice-select.min.css">
+    <link rel="stylesheet" href="plugins/slick/slick.min.css">
+    <!-- Vendor stylesheets  -->
+    <link rel="stylesheet" href="./plugins/theme-mode-switcher/switcher-panel.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Custom stylesheet -->
+  </head>
+  <body data-theme="light">
+    <div class="site-wrapper overflow-hidden">
+      <!-- Header start  -->
+      <!-- Header Area -->
+      <header class="site-header site-header--menu-right sticky-bg-white light-mode-texts menu-link-hover-black site-header--absolute site-header--sticky">
+        <div class="container">
+          <nav class="navbar site-navbar offcanvas-active navbar-expand-lg px-0">
+            <!-- Brand Logo-->
+            <div class="brand-logo d-inline-block">
+              <a href="index.html">
+                <!-- light version logo (logo must be black)-->
+                <img src="./image/png/Full_Lockup_Lavender_Small.png" width="145" alt="">
+                <!-- Dark version logo (logo must be White)-->
+              </a>
             </div>
-            <button class="d-block d-lg-none offcanvas-btn-close" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="true" aria-label="Toggle navigation">
-              <i class="gr-cross-icon"></i>
-            </button>
-          </div>
-          <div class="header-btn ">
-            <a class="btn btn-1 btn-mineshaft-2 text-white font-size-5 letter-spacing-np4 font-weight-normal" href="https://finestdevs.com/shade/">
-              Download Now
-            </a>
-          </div>
-          <!-- Mobile Menu Hamburger-->
-          <button class="navbar-toggler btn-close-off-canvas  hamburger-icon border-0" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- <i class="icon icon-simple-remove icon-close"></i> -->
+            <div class="collapse navbar-collapse" id="mobile-menu">
+              <div class="navbar-nav-wrapper">
+                <ul class="navbar-nav main-menu">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle gr-toggle-arrow" id="navbarDropdown" href="#features" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features<i class="icon icon-small-down"></i></a>
+                    <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        Sorting Hats
+                        </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        Contacts
+                        </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        Tasks
+                        </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        Automation
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle gr-toggle-arrow" id="navbarDropdown" href="#features" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Team<i class="icon icon-small-down"></i></a>
+                    <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        Alex
+                        </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        Noah
+                        </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        Mika
+                        </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        P.A
+                        </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a href="#">
+                        Hanna
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Demos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item border-0">
+                    <a class="nav-link" href="https://finestdevs.com/product-support/" role="button" aria-expanded="false">Support</a>
+                  </li>
+                  <li class="nav-item header-btn border-0 col-pb-sm-6"> 
+                    <a class="btn btn-2 btn-white margin-right-15px border-mineshaft-3  text-mineshaft-2 font-size-5 letter-spacing-np4 font-weight-normal" href="https://finestdevs.com/shade/">
+                    Sign In
+                    </a>
+                  </li>
+                  <li class="nav-item header-btn"> 
+                    <a class=" border-0 btn btn-2 btn-lavender text-white font-size-5 letter-spacing-np4 font-weight-normal" href="https://finestdevs.com/shade/">
+                    Sign up now
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Mobile Menu Hamburger-->
+            <button class="navbar-toggler btn-close-off-canvas  hamburger-icon border-0" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="hamburger hamburger--squeeze js-hamburger">
-          <span class="hamburger-box">
+            <span class="hamburger-box">
             <span class="hamburger-inner"></span>
             </span>
             </span>
-          </button>
-          <!--/.Mobile Menu Hamburger Ends-->
-        </nav>
-      </div>
-    </header>
-    <!-- navbar- -->
-    <!-- Header start end -->
-    <!-- hero area -->
-    <div class="pt-25 pt-md-25 pt-lg-32 pb-xl-9 pb-lg-25 pb-md-15 pb-11 position-relative z-index-1 overflow-hidden">
-      <div class="container">
-        <div class="row position-relative justify-content-center">
-          <!-- hero area content start -->
-          <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 pt-md-13 pr-0" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-            <!-- hero area section title start -->
-            <h1 class="font-size-18 text-mineshaft letter-spacing-n3p11 font-weight-normal font-family-3 line-height-1p085 pr-xl-19 pr-lg-22 pr-md-33 pr-sm-19 pr-18 mb-7 ">Get More Customers</h1>
-            <p class="font-size-9 text-ebonyclay letter-spacing-np4 pr-xl-15 pr-lg-12 pr-md-12 pr-sm-7 pr-0 mb-11">Create custom landing pages with Shades that convert more visitors than any website—no coding required.</p>
-            <!-- hero area section title end -->
-            <!-- hero btn Start -->
-            <a href="#" class="btn btn-mineshaft-2 btn-xl font-size-8 font-weight-normal letter-spacing-np4">Start my free trial</a>
-            <!-- hero btn end -->
+            </button>
+            <!--/.Mobile Menu Hamburger Ends-->
+          </nav>
+        </div>
+      </header>
+      <!-- navbar- -->
+      <!-- Header start end -->
+      <!-- hero area -->
+      <div class="pt-25 pt-md-25 pt-lg-32 pb-xl-9 pb-lg-25 pb-md-15 pb-11 position-relative z-index-1 overflow-hidden">
+        <div class="container">
+          <div class="row position-relative justify-content-left" >
+            <!-- hero area content start -->
+            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 pt-md-13 pr-0" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+              <!-- hero area section title start -->
+              <h1 class="font-size-16 text-mineshaft font-weight-bold font-family-3 line-height-1p085 pr-xl-5 pr-lg-5 pr-md-33 pr-sm-19 pr-15 mb-7 ">Grow Your Sales Achieve Goals</h1>
+              <p class="font-size-8 text-ebonyclay  pr-xl-15 pr-lg-12 pr-md-12 pr-sm-7 pr-0 mb-11">nestedly's CRM platform helps you build and grow sales and save time by automating tasks</p>
+              <!-- hero area section title end -->
+              <!-- hero btn Start -->
+              <a href="#" class="btn btn-mineshaft-2 btn-xl font-size-8 font-weight-normal letter-spacing-np4">Start free trial</a>
+              <!-- hero btn end -->
+              <div>
+                <img width="40%" src="./image/svg/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="">
+                <img width="50%"  src="./image/png/google-play-badge.png"  alt="" >
+              </div>
+            </div>
+            <!-- hero area content end -->
+            <!-- Hero Right Image starts-->
+            <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 pt-sm-9" data-aos="fade-right"  data-aos-duration="800" data-aos-once="true">
+              <div class="hero-img pr-xl-12 mt-0 img-fluid pt-15 text-md-center">
+                <img src="./image/l4/png/placeholderimag-header.png" alt="" class="w-100 mt-xl-lg-n10 ">
+              </div>
+            </div>
+            <!-- ./Hero Right Image ends-->
           </div>
-          <!-- hero area content end -->
-          <!-- Hero Right Image -->
-          <div class="col-xl-7 col-lg-5 col-md-8 " data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-            <div class="hero-img pr-xl-9 mt-0">
-              <img src="./image/l4/png/hero-img.png" alt="" class="w-100 mt-xl-n10">
+        </div>
+        <div class="bg-shape-4 img-fluid" ></div>
+      </div>
+      <!-- brand-area start -->
+      <div class="pt-lg-19 pt-sm-9 pt-15 pb-lg-19 pb-15">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 mb-7 text-center">
+              <h2 class="font-size-17 font-weight-normal font-family-3 mb-9">Integrations with apps</h2>
             </div>
           </div>
-          <!-- ./Hero Right Image -->
+          <!-- brand-logos start -->
+          <div class="brand-logos row justify-content-center justify-content-lg-between align-items-center px-12">
+            <!-- single-brand start -->
+            <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
+              <img src="image/png/Li-logo.png" width="163" alt="">
+            </div>
+            <!-- single-brand end -->
+            <!-- single-brand start -->
+            <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="700" data-aos-once="true">
+              <img src="image/png/Li-logo.png" width="163" alt="">
+            </div>
+            <!-- single-brand end -->
+            <!-- single-brand start -->
+            <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="900" data-aos-once="true">
+              <img src="image/png/Li-logo.png" width="163" alt="">
+            </div>
+            <!-- single-brand end -->
+            <!-- single-brand start -->
+            <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+              <img src="image/png/Li-logo.png" width="163" alt="">
+            </div>
+            <!-- single-brand end -->
+            <!-- single-brand start -->
+            <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="1200" data-aos-once="true">
+              <img src="image/png/Li-logo.png" width="163" alt="">
+            </div>
+            <!-- single-brand end -->
+          </div>
+          <!-- brand-logos end -->
         </div>
       </div>
-      <div class="bg-shape-4"></div>
-    </div>
-    <!-- brand-area start -->
-    <div class="border-bottom pt-lg-19 pt-sm-9 pt-15 pb-lg-19 pb-15">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 mb-7 text-center">
-            <h4 class="font-size-10 font-family-3 font-weight-normal line-height-reset">The #1 Landing Page Platform for 15,000+ Brands</h4>
-          </div>
-        </div>
-        <!-- brand-logos start -->
-        <div class="brand-logos row justify-content-center justify-content-lg-between align-items-center img-grayscale px-12">
-          <!-- single-brand start -->
-          <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
-            <img src="image/svg/brand-logo-1.svg" alt="">
-          </div>
-          <!-- single-brand end -->
-          <!-- single-brand start -->
-          <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="700" data-aos-once="true">
-            <img src="image/svg/brand-logo-2.svg" alt="">
-          </div>
-          <!-- single-brand end -->
-          <!-- single-brand start -->
-          <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="900" data-aos-once="true">
-            <img src="image/svg/brand-logo-3.svg" alt="">
-          </div>
-          <!-- single-brand end -->
-          <!-- single-brand start -->
-          <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
-            <img src="image/svg/brand-logo-4.svg" alt="">
-          </div>
-          <!-- single-brand end -->
-          <!-- single-brand start -->
-          <div class="single-brand mx-7 py-4" data-aos="fade-right" data-aos-duration="1200" data-aos-once="true">
-            <img src="image/svg/brand-logo-5.svg" alt="">
-          </div>
-          <!-- single-brand end -->
-        </div>
-        <!-- brand-logos end -->
-      </div>
-    </div>
-    <!-- brand-area end -->
-    <!-- content-1 section start -->
-    <div class="position-relative pt-xl-24 pt-lg-15 pt-10 pb-lg-20 pb-15">
-      <!-- content-bg-shape start -->
-      <div class="content-bg-shape pos-abs-tl translateX-n50 ml-30 mt-35">
-        <img src="image/l4/png/content-bg-shape.png" alt="">
-      </div>
-      <!-- content-bg-shape end -->
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xl-11">
-            <div class="row justify-content-center">
-              <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10" data-aos="fade-right" data-aos-duration="1200" data-aos-once="true">
-                <!-- content-1 start -->
-                <div class="h-100 pt-md-7 pt-9 pr-md-0 pr-xl-0 pr-0 text-lg-left text-center">
-                  <!-- content-1 section-title start -->
-                  <h2 class="font-size-17 letter-spacing-n3p16 font-weight-normal font-family-3 mb-9">Build Beautiful Landing Pages Faster.</h2>
-                  <p class="font-size-9 letter-spacing-np4 mb-10 mb-lg-15 pr-xl-0 pr-lg-9 pr-sm-0">Create custom landing pages with Shades that
-                    convert more visitors than any website—no coding required.</p>
-                  <!-- content-1 section-title end -->
-                  <!-- btn-text start -->
-                  <a href="#" class="btn-text text-blueribbon-2 font-size-6 letter-spacing-np4 font-weight-bold mb-3">
+      <!-- brand-area end -->
+      <!-- content-1 section start -->
+      <div class="position-relative pt-xl-19 pt-lg-15 pt-10 pb-lg-15 pb-15">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-12">
+              <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+                  <!-- content-1 start -->
+                  <div class="h-100 pt-md-7 pt-9 pr-md-0 pr-xl-0 pr-0 text-lg-left text-center">
+                    <!-- content-1 section-title start -->
+                    <h2 class="font-size-17  font-weight-normal font-family-3 mb-9">Build Beautiful Landing Pages Faster.</h2>
+                    <p class="font-size-9 letter-spacing-np4 mb-10 mb-lg-15 pr-xl-0 pr-lg-9 pr-sm-0">Create custom landing pages with Shades that
+                      convert more visitors than any website—no coding required.
+                    </p>
+                    <!-- content-1 section-title end -->
+                    <!-- btn-text start -->
+                    <a href="#" class="btn-text text-lavender font-size-6 letter-spacing-np4 font-weight-bold mb-3">
                     Get Started Now
                     <i class="fas fa-angle-right ml-6 font-size-4"></i>
+                    </a>
+                    <!-- btn-text end -->
+                  </div>
+                  <!-- content-１ end -->
+                </div>
+                <div class="col-xl-7 col-lg-6 col-md-8 pl-xl-11" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+                  <!-- content img start -->
+                  <div class="content-img pt-lg-10 pt-10">
+                    <img src="./image/l4/png/placeholderimag-header.png" alt="" class="w-100">
+                  </div>
+                  <!-- content img end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-2 section start -->
+      <div class="container1 container" >
+        <div class="row justify-content-center ">
+          <div class="col-xl-12 ">
+            <div class="row justify-content-center ">
+              <div class="left col-xl-7 col-lg-6 col-md-8 col-xs-12 pl-xl-0 pr-xl-11 col-xs-offset-9" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+                <!-- content img start -->
+                <div class="left pt-lg-10 pt-10" style="float: left;">
+                  <img src="./image/l4/png/placeholderimag-header.png" alt="" class="w-100">
+                </div>
+                <!-- content 2 img end -->
+              </div>
+              <div class="right col-xl-5 col-lg-6 col-md-8 col-sm-10" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+                <!-- content-2 start -->
+                <div class="right h-100 pt-md-7 pt-9 pr-md-0 pr-xl-0 pr-0 text-lg-left text-center col-xs-12" style="float: right;">
+                  <!-- content-2 section-title start -->
+                  <h2 class=" font-size-17 font-weight-normal font-family-3 mb-9">Build Beautiful Landing Pages Faster.</h2>
+                  <p class="font-size-9 letter-spacing-np4 mb-10 mb-lg-15 pr-xl-0 pr-lg-9 pr-sm-0">Create custom landing pages with Shades that
+                    convert more visitors than any website—no coding required.
+                  </p>
+                  <!-- content-2 section-title end -->
+                  <!-- btn-text start -->
+                  <a href="#" class="btn-text text-lavender font-size-6 letter-spacing-np4 font-weight-bold mb-3">
+                  Get Started Now
+                  <i class="fas fa-angle-right ml-6 font-size-4"></i>
                   </a>
                   <!-- btn-text end -->
                 </div>
                 <!-- content-2 end -->
               </div>
-              <div class="col-xl-7 col-lg-6 col-md-8 pl-xl-11" data-aos="fade-left" data-aos-duration="1200" data-aos-once="true">
-                <!-- content img start -->
-                <div class="content-img pt-lg-0 pt-10">
-                  <img src="image/l4/svg/content-img-1.svg" alt="" class="w-xl-auto w-100">
-                </div>
-                <!-- content img end -->
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- content-1 section start -->
-    <div class="pb-lg-2 pb-0">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xl-11">
-            <div class="row justify-content-center">
-              <div class="col-lg-6 col-md-8" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-                <!-- content img start -->
-                <div class="content-img pr-lg-13">
-                  <img src="image/l4/png/content-img-2.png" alt="" class="w-100">
-                </div>
-                <!-- content img end -->
-              </div>
-              <div class="col-xl-5 offset-xl-1 col-lg-6 col-md-8 col-sm-10" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-                <!-- content-1 start -->
-                <div class="d-flex flex-column justify-content-center h-100 pl-0 pt-lg-0 pt-15 pr-xl-0 pr-lg-9 pr-xxl-0 pr-0 text-lg-left text-center">
-                  <!-- content-1 section-title start -->
-                  <h2 class="font-size-17 letter-spacing-n3p16 font-weight-normal font-family-3 mb-10 pr-xl-0 pr-lg-19">
-                    Build Beautiful Landing Pages Faster.
-                  </h2>
-                  <p class="font-size-9 letter-spacing-np4 pr-lg-0 pr-md-9 mb-10 mb-lg-15">Create custom landing pages with Shades that convert more visitors than any website, no coding required.</p>
-                  <!-- content-1 section-title end -->
-                  <!-- btn-text start -->
-                  <a href="#" class="btn-text text-blueribbon-2 font-size-6 letter-spacing-np4 font-weight-bold mb-3">
+      <!-- content-2 section end -->
+      <!-- content-3 section start -->
+      <div class="position-relative pt-xl-24 pt-lg-15 pt-10 pb-lg-20 pb-15">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-12">
+              <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+                  <!-- content-3 start -->
+                  <div class="h-100 pt-md-7 pt-9 pr-md-0 pr-xl-0 pr-0 text-lg-left text-center">
+                    <!-- content-3 section-title start -->
+                    <h2 class="font-size-17  font-weight-normal font-family-3 mb-9">Build Beautiful Landing Pages Faster.</h2>
+                    <p class="font-size-9 letter-spacing-np4 mb-10 mb-lg-15 pr-xl-0 pr-lg-9 pr-sm-0">Create custom landing pages with Shades that
+                      convert more visitors than any website—no coding required.
+                    </p>
+                    <!-- content-3 section-title end -->
+                    <!-- btn-text start -->
+                    <a href="#" class="btn-text text-lavender font-size-6 letter-spacing-np4 font-weight-bold mb-3">
                     Get Started Now
                     <i class="fas fa-angle-right ml-6 font-size-4"></i>
+                    </a>
+                    <!-- btn-text end -->
+                  </div>
+                  <!-- content-3 end -->
+                </div>
+                <div class="col-xl-7 col-lg-6 col-md-8 pl-xl-11" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+                  <!-- content img 3 start -->
+                  <div class="content-img pt-lg-10 pt-10">
+                    <img src="./image/l4/png/placeholderimag-header.png" alt="" class="w-100">
+                  </div>
+                  <!-- content img 3 end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-3 section end -->
+        <!-- features-section start -->
+        <div class="features-section">
+          <div class="container bg-shape-img-2 pt-25 pb-lg-25 pb-15 mt-2 position-relative">
+            <h2 class=" text-center font-size-17 heading-default-color font-weight-normal font-family-3 mb-13">Features</h2>
+            <div class="row justify-content-center mx-0 pt-0">
+              <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6 px-0" data-aos="fade-right" data-aos-duration="00" data-aos-once="true">
+                <!-- media start -->
+                <div class="media rounded-5 pl-xl-27 pr-lg-0 mb-xl-12 mb-9 hover-icon-shadow">
+                  <!-- circle-85 start -->
+                  <div class="circle-85 bg-lavender mt-4 hover-icon">
+                    <img src="./image/l4/svg/clipboards.svg" alt="" class="w-50">
+                  </div>
+                  <!-- circle-85 end -->
+                  <!-- media-body start -->
+                  <div class="media-body pl-sm-14 pl-5">
+                    <h5 class="font-size-12 font-family-3 letter-spacing-n1p33 font-weight-normal text-mineshaft-2 mt-0 mb-5">Easy to use</h5>
+                    <p class="font-size-5 letter-spacing-np4 line-height-1p86 text-mineshaft-2  pr-lg-0 pr-md-9 mb-0">Event is not like most tech conferences.
+                      We want our presentations to engage the audience, spark discussion and inspire new ideas.
+                    </p>
+                  </div>
+                  <!-- media-body end -->
+                </div>
+                <!-- media end -->
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6 px-0" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+                <!-- media start -->
+                <div class="media rounded-5 pr-xl-27 mb-xl-12 mb-9 hover-icon-shadow">
+                  <!-- circle-85 start -->
+                  <div class="circle-85  bg-lavender mt-4 hover-icon">
+                    <img src="./image/l4/svg/clipboards.svg" alt="" class="w-50">
+                  </div>
+                  <!-- circle-85 end -->
+                  <!-- media-body start -->
+                  <div class="media-body pl-sm-14 pl-5">
+                    <h5 class="font-size-12 font-family-3 letter-spacing-n1p33 font-weight-normal text-mineshaft-2 mt-0 mb-5">Easy to Use</h5>
+                    <p class="font-size-5 letter-spacing-np4 line-height-1p86 text-mineshaft-2  pr-xl-0 pr-lg-6 pr-md-11 mb-0">Event is not like most tech conferences.
+                      We want our presentations to engage the audience, and inspire new ideas.
+                    </p>
+                  </div>
+                  <!-- media-body end -->
+                </div>
+                <!-- media end -->
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6 px-0" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+                <!-- media start -->
+                <div class="media rounded-5 pl-xl-27 pr-lg-0 mb-xl-0 mb-9 hover-icon-shadow">
+                  <!-- circle-85 start -->
+                  <div class="circle-85 bg-lavender mt-4 hover-icon">
+                    <img src="./image/l4/svg/clipboards.svg" alt="" class="w-50">
+                  </div>
+                  <!-- circle-85 end -->
+                  <!-- media-body start -->
+                  <div class="media-body pl-sm-14 pl-5">
+                    <h5 class="font-size-12 font-family-3 letter-spacing-n1p33 font-weight-normal text-mineshaft-2 mt-0 mb-5">Easy to Use</h5>
+                    <p class="font-size-5 letter-spacing-np4 line-height-1p86 text-mineshaft-2  pr-xl-0 pr-lg-6 pr-md-11 mb-0">Event is not like most tech conferences.
+                      We want our presentations to engage the audience.
+                    </p>
+                  </div>
+                  <!-- media-body end -->
+                </div>
+                <!-- media end -->
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6 px-0" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+                <!-- media start -->
+                <div class="media rounded-5 pr-xl-25 mb-xl-0 mb-9 hover-icon-shadow">
+                  <!-- circle-85 start -->
+                  <div class="circle-85  bg-lavender mt-4 hover-icon">
+                    <img src="./image/l4/svg/clipboards.svg" alt="" class="w-50" />
+                  </div>
+                  <!-- circle-85 end -->
+                  <!-- media-body start -->
+                  <div class="media-body pl-sm-14 pl-5">
+                    <h5 class="font-size-12 font-family-3 letter-spacing-n1p33 font-weight-normal text-mineshaft-2 mt-0 mb-5">Easy to Use</h5>
+                    <p class="font-size-5 letter-spacing-np4 line-height-1p86 text-mineshaft-2  pr-lg-0 pr-md-9 mb-0">Event is not like most tech conferences.
+                      We want our presentations to engage the audience, spark discussion and inspire new ideas.
+                    </p>
+                  </div>
+                  <!-- media-body end -->
+                </div>
+                <!-- media end -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- pricing-area section -->
+        <div class="position-relative overflow-hidden bg-default pt-md-10 pt-sm-5 pt-0 pb-lg-13 pb-10 z-index-1">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-xl-6 col-lg-7 col-md-10 px-0 text-center" data-aos="fade-down" data-aos-duration="800" data-aos-once="true">
+                <!-- features-1 section-title start -->
+                <h2 class="font-size-17 heading-default-color font-weight-normal font-family-3 mb-7">Simple pricing</h2>
+                <p class="text-oslogray font-size-9 letter-spacing-np4 line-height-1p714 mb-13">Create custom landing pages with Shades that convert more visitors than any website—no coding required.</p>
+                <!-- features-1 section-title end -->
+              </div>
+            </div>
+            <div class="row justify-content-center" id="table-price-value" data-pricing-dynamic data-value-active="monthly">
+              <div class="col-md-12 text-center">
+                <!-- toggle-btn start -->
+                <div class="toggle-btn d-inline-block mt-7 justify-content-center mb-8">
+                  <a class="btn-toggle btn-toggle-2 active-white font-size-2 line-height-reset d-flex mx-6 price-deck-trigger border-default-color-2 px-6" data-pricing-trigger data-target="#table-price-value" href="javascript:">
+                  <span class="round"></span>
                   </a>
-                  <!-- btn-text end -->
                 </div>
-                <!-- content-1 end -->
+                <!-- toggle-btn end -->
               </div>
+              <div class="col-md-12 col-sm-8 mb-9 l4-pricing-table row no-gutters">
+                <div class="col-lg-3 col-md-6 border">
+                  <!-- single-price start -->
+                  <div class="single-price bg-default text-center  pt-5 pb-10 mb-lg-0 mb-9" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+                    <!-- price-top start -->
+                    <div class="price-top justify-content-between mb-2">
+                      <span class="font-size-1 letter-spacing-np51 line-height-2p66 text-dovegray text-uppercase font-weight-bold">Basic</span>
+                    </div>
+                    <!-- price-top end -->
+                    <!-- main-price start -->
+                    <div class="main-price pb-8 border-bottom">
+                      <div class="price mt-3 mb-3 position-relative">
+                        <span class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3  dynamic-value">$</span>
+                        <h2 class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3  dynamic-value" data-active="15" data-monthly="19" data-yearly="199"></h2>
+                      </div>
+                      <span class="text-dovegray font-size-4 font-weight-normal letter-spacing-np43 dynamic-value" data-active="per month" data-monthly="Per month" data-yearly="per year"></span>
+                    </div>
+                    <!-- main-price end -->
+                    <!-- price-body start -->
+                    <div class="price-body pt-8 px-xl-11 px-lg-7 px-11">
+                      <ul class="pricing-list with-check-icon letter-spacing-np42 list-unstyled font-size-4 mb-14 border-murcery-2 border-bottom pb-6">
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Unlimited Blocks</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> 5GB Clould Storages</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Custom Domain Names</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"><del class="text-gray">Unlimited Emails</del></li>
+                      </ul>
+                    </div>
+                    <!-- price-body end -->
+                    <!-- price-btn start -->
+                    <div class="price-btn">
+                      <a class="btn btn-mineshaft-2 rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
+                    </div>
+                    <!-- price-btn end -->
+                  </div>
+                  <!-- single-price end -->
+                </div>
+                <div class="col-lg-3 col-md-6 border">
+                  <!-- single-price start -->
+                  <div class="single-price bg-default popular-pricing popular-pricing-2 text-center position-relative  pt-5 pb-10 mb-lg-0 mb-9" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+                    <!-- price-top start -->
+                    <div class="price-top justify-content-between mb-2">
+                      <span class="font-size-1 letter-spacing-np51 line-height-2p66 text-dovegray text-uppercase font-weight-bold">Pro</span>
+                    </div>
+                    <!-- price-top end -->
+                    <!-- main-price start -->
+                    <div class="main-price pb-8 border-bottom">
+                      <div class="price mt-3 mb-3 position-relative">
+                        <span class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value">$</span>
+                        <h2 class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value" data-active="15" data-monthly="29" data-yearly="299"></h2>
+                      </div>
+                      <span class="text-dovegray font-size-4 font-weight-normal letter-spacing-np43 dynamic-value" data-active="per month" data-monthly="per month" data-yearly="per year"></span>
+                    </div>
+                    <!-- main-price end -->
+                    <!-- price-body start -->
+                    <div class=" price-body pt-8 px-xl-11 px-lg-7 px-11">
+                      <ul class="pricing-list with-check-icon letter-spacing-np42 list-unstyled font-size-4 mb-14 border-murcery-2 border-bottom pb-6">
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Unlimited Blocks</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> 5GB Clould Storages</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Custom Domain Names</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8">Unlimited Emails</li>
+                      </ul>
+                    </div>
+                    <!-- price-body end -->
+                    <!-- price-btn start -->
+                    <div class="price-btn">
+                      <a class="btn btn-lavender rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
+                    </div>
+                    <!-- price-btn end -->
+                  </div>
+                  <!-- single-price end -->
+                </div>
+                <div class="col-lg-3 col-md-6 border">
+                  <!-- single-price start -->
+                  <div class="single-price bg-default text-center  pt-5 pb-10 mb-lg-0 mb-9" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+                    <!-- price-top start -->
+                    <div class="price-top justify-content-between mb-2">
+                      <span class="font-size-1 letter-spacing-np51 line-height-2p66 text-dovegray text-uppercase font-weight-bold">Smart</span>
+                    </div>
+                    <!-- price-top end -->
+                    <!-- main-price start -->
+                    <div class="main-price pb-8 border-bottom">
+                      <div class="price mt-3 mb-3 position-relative">
+                        <span class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value">$</span>
+                        <h2 class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value" data-active="15" data-monthly="49" data-yearly="499"></h2>
+                      </div>
+                      <span class="text-dovegray font-size-4 font-weight-normal letter-spacing-np43 dynamic-value" data-active="per month" data-monthly="per month" data-yearly="per year"></span>
+                    </div>
+                    <!-- main-price end -->
+                    <!-- price-body start -->
+                    <div class=" price-body pt-8 px-xl-11 px-lg-7 px-11">
+                      <ul class="pricing-list with-check-icon letter-spacing-np42 list-unstyled font-size-4 mb-14 border-murcery-2 border-bottom pb-6">
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Unlimited Blocks</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> 5GB Clould Storages</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Custom Domain Names</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8">Unlimited Emails</li>
+                      </ul>
+                    </div>
+                    <!-- price-body end -->
+                    <!-- price-btn start -->
+                    <div class="price-btn">
+                      <a class="btn btn-mineshaft-2 rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
+                    </div>
+                    <!-- price-btn end -->
+                  </div>
+                  <!-- single-price end -->
+                </div>
+                <div class="col-lg-3 col-md-6 border">
+                  <!-- single-price start -->
+                  <div class="single-price bg-default  text-center  pt-5 pb-10" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+                    <!-- price-top start -->
+                    <div class="price-top justify-content-between mb-2">
+                      <span class="font-size-1 letter-spacing-np51 text-dovegray line-height-1p66 font-weight-bold">Exclusive</span>
+                    </div>
+                    <!-- price-top end -->
+                    <!-- main-price start -->
+                    <div class="main-price pb-8 border-bottom">
+                      <div class="price mt-3 mb-3 position-relative">
+                        <span class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value">$</span>
+                        <h2 class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value" data-active="15" data-monthly="89" data-yearly="999"></h2>
+                      </div>
+                      <span class="text-dovegray font-size-4 font-weight-normal letter-spacing-np43 dynamic-value" data-active="per month" data-monthly="per month" data-yearly="per year"></span>
+                    </div>
+                    <!-- main-price end -->
+                    <!-- price-body start -->
+                    <div class="price-body pt-8 px-xl-11 px-lg-7 px-11">
+                      <ul class="pricing-list with-check-icon letter-spacing-np42 list-unstyled font-size-4 mb-14 border-murcery-2 border-bottom pb-6">
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Unlimited Blocks</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> 5GB Clould Storages</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Custom Domain Names</li>
+                        <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8">Unlimited Emails</li>
+                      </ul>
+                    </div>
+                    <!-- price-body end -->
+                    <!-- price-btn start -->
+                    <div class="price-btn">
+                      <a class="btn btn-mineshaft-2 rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
+                    </div>
+                    <!-- price-btn end -->
+                  </div>
+                  <!-- single-price end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- marketing -->
+        <div class="align-items-center pt-lg-0 pt-0" data-aos="fade-in" data-aos-duration="2000" data-aos-once="true">
+          <div class="container position-relative text-center pt-0 pb-xl-10 pb-lg-1 pb-0 ">
+            <!-- bg-shape-img-3 start -->
+            <div class="bg-shape-img-3">
+              <img  src="./image/png/birds.png " alt="" class="w-100"/>
+            </div>
+            <div class="marketing justify-content-center ">
+              <div class="col-lg-8 col-sm-12 " data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+                <!-- cta content start -->
+                <h2 class="text-mineshaft-2 font-family-3 font-weight-normal font-size-14 font-size-md-8 font-size-sm-1 justify-content-center letter-spacing-n2p53 mb-8 mt-sm-10">Ready to get started?</h2>
+                <!-- cta content end -->          
+              </div>
+              <div class="price-btn">
+                <div class="btn pb-md-10 col-lg-4  text-lg-right text-sm-center justify-content-center " data-aos="fade-left" data-aos-duration="800" data-aos-once="true"></div>
+                <a class="btn btn-mineshaft-2 rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
+              </div>
+              <!-- cta content btn start -->
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- features-section start -->
-    <div class="features-section">
-      <div class="container bg-shape-img-2 pt-35 pb-lg-28 pb-25 mt-2 position-relative">
-        <div class=""></div>
-        <div class="row justify-content-center mx-0 pt-0">
-          <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6 px-0" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-            <!-- media start -->
-            <div class="media rounded-5 pl-xl-27 pr-lg-0 mb-xl-12 mb-9 hover-icon-shadow">
-              <!-- circle-85 start -->
-              <div class="circle-85 mt-4 hover-icon">
-                <img src="./image/l4/png/f-icon-1.png" alt="">
-              </div>
-              <!-- circle-85 end -->
-              <!-- media-body start -->
-              <div class="media-body pl-sm-14 pl-5">
-                <h5 class="font-size-12 font-family-3 letter-spacing-n1p33 font-weight-normal text-white mt-0 mb-5">Easy to use</h5>
-                <p class="font-size-5 letter-spacing-np4 line-height-1p86 text-heather pr-lg-0 pr-md-9 mb-0">Event is not like most tech conferences.
-                  We want our presentations to engage the audience, spark discussion and inspire new ideas.</p>
-              </div>
-              <!-- media-body end -->
-            </div>
-            <!-- media end -->
+    </div>
+    <!-- Footer -->
+    <footer class="pt-20 pt-sm-5  pb-sm-10 text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row mb-0 mt-md-10">
+          <!-- Grid container -->
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-10 mb-md-0 text-lg-left">
+            <h5 class="text-uppercase">Features</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-dark">Feature</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Feature</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Feature</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6 px-0" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-            <!-- media start -->
-            <div class="media rounded-5 pr-xl-27 mb-xl-12 mb-9 hover-icon-shadow">
-              <!-- circle-85 start -->
-              <div class="circle-85 mt-4 hover-icon">
-                <img src="./image/l4/png/f-icon-2.png" alt="">
-              </div>
-              <!-- circle-85 end -->
-              <!-- media-body start -->
-              <div class="media-body pl-sm-14 pl-5">
-                <h5 class="font-size-12 font-family-3 letter-spacing-n1p33 font-weight-normal text-white mt-0 mb-5">Easy to Use</h5>
-                <p class="font-size-5 letter-spacing-np4 line-height-1p86 text-heather pr-xl-0 pr-lg-6 pr-md-11 mb-0">Event is not like most tech conferences.
-                  We want our presentations to engage the audience, and inspire new ideas.</p>
-              </div>
-              <!-- media-body end -->
-            </div>
-            <!-- media end -->
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-10 mb-md-0 text-lg-left">
+            <h5 class="text-uppercase">Resources</h5>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-dark">Resource</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Resource</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Resource</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Resource</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Resource</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6 px-0" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-            <!-- media start -->
-            <div class="media rounded-5 pl-xl-27 pr-lg-0 mb-xl-0 mb-9 hover-icon-shadow">
-              <!-- circle-85 start -->
-              <div class="circle-85 mt-4 hover-icon">
-                <img src="./image/l4/png/f-icon-3.png" alt="">
-              </div>
-              <!-- circle-85 end -->
-              <!-- media-body start -->
-              <div class="media-body pl-sm-14 pl-5">
-                <h5 class="font-size-12 font-family-3 letter-spacing-n1p33 font-weight-normal text-white mt-0 mb-5">Easy to Use</h5>
-                <p class="font-size-5 letter-spacing-np4 line-height-1p86 text-heather pr-xl-0 pr-lg-6 pr-md-11 mb-0">Event is not like most tech conferences.
-                  We want our presentations to engage the audience.</p>
-              </div>
-              <!-- media-body end -->
-            </div>
-            <!-- media end -->
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-10 mb-md-5 text-lg-left">
+            <h5 class="text-uppercase ">About</h5>
+            <ul class="list-unstyled ">
+              <li>
+                <a href="#!" class="text-dark">About nestedly</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Careers</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Contact</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Terms and Conditions</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Terms and Conditions</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6 px-0" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-            <!-- media start -->
-            <div class="media rounded-5 pr-xl-25 mb-xl-0 mb-9 hover-icon-shadow">
-              <!-- circle-85 start -->
-              <div class="circle-85 bg-white mt-4 hover-icon">
-                <img src="./image/l4/png/f-icon-4.png" alt="" class="w-100" />
-              </div>
-              <!-- circle-85 end -->
-              <!-- media-body start -->
-              <div class="media-body pl-sm-14 pl-5">
-                <h5 class="font-size-12 font-family-3 letter-spacing-n1p33 font-weight-normal text-white mt-0 mb-5">Easy to Use</h5>
-                <p class="font-size-5 letter-spacing-np4 line-height-1p86 text-heather pr-lg-0 pr-md-9 mb-0">Event is not like most tech conferences.
-                  We want our presentations to engage the audience, spark discussion and inspire new ideas.</p>
-              </div>
-              <!-- media-body end -->
-            </div>
-            <!-- media end -->
-          </div>
+          <!--Grid column-->
+          <!--Grid row-->
+          <section class="col-lg-3 col-md-6 mb-10 mb-md-10 text-lg-left">
+            <h5>Customer Support</h5>
+            <h5><a class="text-lavender"href=#>+1 800 123 4567</a></h5>
+            <br>
+            <!-- Facebook -->
+            <h5>Connect Us</h5>
+            <a class="circle-icon bg-mineshaft-3" href="#!" role="button"
+              ><i class="fab fa-facebook-f"></i
+              ></a>
+            <!-- Twitter -->
+            <a class="circle-icon bg-mineshaft-3" href="#!" role="button"
+              ><i class="fab fa-twitter"></i
+              ></a>
+            <!-- Google -->
+            <a class="circle-icon bg-mineshaft-3" href="#!" role="button"
+              ><i class="fab fa-google"></i
+              ></a>
+            <!-- Instagram -->
+            <a class="circle-icon bg-mineshaft-3" href="#!" role="button"
+              ><i class="fab fa-instagram"></i
+              ></a>
+            <!-- Linkedin -->
+            <a class="circle-icon bg-mineshaft-3" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"></i
+              ></a>
+            <!-- Github -->
+            <a class="circle-icon bg-mineshaft-3" href="#!" role="button"
+              ><i class="fab fa-github"></i
+              ></a>
+        </div>
+        </section>
+        <!-- Section: Social media -->
+        <div class="mt-5 mb-0">    
+          <small class="text-center ">
+          © 2021 nestedly. All Rights Reserved
+          </small>
         </div>
       </div>
-    </div>
-    <!-- pricing-area section -->
-    <div class="position-relative overflow-hidden bg-default pt-md-8 pt-sm-15 pt-0 pb-lg-13 pb-10 z-index-1">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-xl-6 col-lg-7 col-md-10 px-0 text-center" data-aos="fade-down" data-aos-duration="800" data-aos-once="true">
-            <!-- features-1 section-title start -->
-            <h2 class="font-size-17 heading-default-color letter-spacing-n3p16 font-weight-normal font-family-3 mb-7">Simple pricing</h2>
-            <p class="text-oslogray font-size-9 letter-spacing-np4 line-height-1p714 mb-13">Create custom landing pages with Shades that convert more visitors than any website—no coding required.</p>
-            <!-- features-1 section-title end -->
-          </div>
-        </div>
-        <div class="row justify-content-center" id="table-price-value" data-pricing-dynamic data-value-active="monthly">
-          <div class="col-md-12 text-center">
-            <!-- toggle-btn start -->
-            <div class="toggle-btn d-inline-block mt-7 justify-content-center mb-8">
-              <a class="btn-toggle btn-toggle-2 active-white font-size-2 line-height-reset d-flex mx-6 price-deck-trigger border-default-color-2 px-6" data-pricing-trigger data-target="#table-price-value" href="javascript:">
-                <span class="round"></span>
-              </a>
-            </div>
-            <!-- toggle-btn end -->
-          </div>
-          <div class="col-md-12 col-sm-8 mb-9 l4-pricing-table row no-gutters">
-            <div class="col-lg-3 col-md-6 border">
-              <!-- single-price start -->
-              <div class="single-price bg-default text-center  pt-5 pb-10 mb-lg-0 mb-9" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-                <!-- price-top start -->
-                <div class="price-top justify-content-between mb-2">
-                  <span class="font-size-1 letter-spacing-np51 line-height-2p66 text-dovegray text-uppercase font-weight-bold">Basic</span>
-                </div>
-                <!-- price-top end -->
-                <!-- main-price start -->
-                <div class="main-price pb-8 border-bottom">
-                  <div class="price mt-3 mb-3 position-relative">
-                    <span class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3  dynamic-value">$</span>
-                    <h2 class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3  dynamic-value" data-active="15" data-monthly="19" data-yearly="199"></h2>
-                  </div>
-                  <span class="text-dovegray font-size-4 font-weight-normal letter-spacing-np43 dynamic-value" data-active="per month" data-monthly="Per month" data-yearly="per year"></span>
-                </div>
-                <!-- main-price end -->
-                <!-- price-body start -->
-                <div class="price-body pt-8 px-xl-11 px-lg-7 px-11">
-                  <ul class="pricing-list with-check-icon letter-spacing-np42 list-unstyled font-size-4 mb-14 border-murcery-2 border-bottom pb-6">
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Unlimited Blocks</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> 5GB Clould Storages</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Custom Domain Names</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"><del class="text-gray">Unlimited Emails</del></li>
-                  </ul>
-                </div>
-                <!-- price-body end -->
-                <!-- price-btn start -->
-                <div class="price-btn">
-                  <a class="btn btn-mineshaft-2 rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
-                </div>
-                <!-- price-btn end -->
-              </div>
-              <!-- single-price end -->
-            </div>
-            <div class="col-lg-3 col-md-6 border">
-              <!-- single-price start -->
-              <div class="single-price bg-default popular-pricing popular-pricing-2 text-center position-relative  pt-5 pb-10 mb-lg-0 mb-9" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
-                <!-- price-top start -->
-                <div class="price-top justify-content-between mb-2">
-                  <span class="font-size-1 letter-spacing-np51 line-height-2p66 text-dovegray text-uppercase font-weight-bold">Pro</span>
-                </div>
-                <!-- price-top end -->
-                <!-- main-price start -->
-                <div class="main-price pb-8 border-bottom">
-                  <div class="price mt-3 mb-3 position-relative">
-                    <span class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value">$</span>
-                    <h2 class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value" data-active="15" data-monthly="29" data-yearly="299"></h2>
-                  </div>
-                  <span class="text-dovegray font-size-4 font-weight-normal letter-spacing-np43 dynamic-value" data-active="per month" data-monthly="per month" data-yearly="per year"></span>
-                </div>
-                <!-- main-price end -->
-                <!-- price-body start -->
-                <div class=" price-body pt-8 px-xl-11 px-lg-7 px-11">
-                  <ul class="pricing-list with-check-icon letter-spacing-np42 list-unstyled font-size-4 mb-14 border-murcery-2 border-bottom pb-6">
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Unlimited Blocks</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> 5GB Clould Storages</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Custom Domain Names</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8">Unlimited Emails</li>
-                  </ul>
-                </div>
-                <!-- price-body end -->
-                <!-- price-btn start -->
-                <div class="price-btn">
-                  <a class="btn btn-spring-green rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
-                </div>
-                <!-- price-btn end -->
-              </div>
-              <!-- single-price end -->
-            </div>
-            <div class="col-lg-3 col-md-6 border">
-              <!-- single-price start -->
-              <div class="single-price bg-default text-center  pt-5 pb-10 mb-lg-0 mb-9" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
-                <!-- price-top start -->
-                <div class="price-top justify-content-between mb-2">
-                  <span class="font-size-1 letter-spacing-np51 line-height-2p66 text-dovegray text-uppercase font-weight-bold">Smart</span>
-                </div>
-                <!-- price-top end -->
-                <!-- main-price start -->
-                <div class="main-price pb-8 border-bottom">
-                  <div class="price mt-3 mb-3 position-relative">
-                    <span class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value">$</span>
-                    <h2 class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value" data-active="15" data-monthly="49" data-yearly="499"></h2>
-                  </div>
-                  <span class="text-dovegray font-size-4 font-weight-normal letter-spacing-np43 dynamic-value" data-active="per month" data-monthly="per month" data-yearly="per year"></span>
-                </div>
-                <!-- main-price end -->
-                <!-- price-body start -->
-                <div class=" price-body pt-8 px-xl-11 px-lg-7 px-11">
-                  <ul class="pricing-list with-check-icon letter-spacing-np42 list-unstyled font-size-4 mb-14 border-murcery-2 border-bottom pb-6">
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Unlimited Blocks</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> 5GB Clould Storages</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Custom Domain Names</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8">Unlimited Emails</li>
-                  </ul>
-                </div>
-                <!-- price-body end -->
-                <!-- price-btn start -->
-                <div class="price-btn">
-                  <a class="btn btn-mineshaft-2 rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
-                </div>
-                <!-- price-btn end -->
-              </div>
-              <!-- single-price end -->
-            </div>
-            <div class="col-lg-3 col-md-6 border">
-              <!-- single-price start -->
-              <div class="single-price bg-default  text-center  pt-5 pb-10" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-                <!-- price-top start -->
-                <div class="price-top justify-content-between mb-2">
-                  <span class="font-size-1 letter-spacing-np51 text-dovegray line-height-1p66 font-weight-bold">Exclusive</span>
-                </div>
-                <!-- price-top end -->
-                <!-- main-price start -->
-                <div class="main-price pb-8 border-bottom">
-                  <div class="price mt-3 mb-3 position-relative">
-                    <span class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value">$</span>
-                    <h2 class="heading-default-color d-inline-block mb-0 font-size-16 font-weight-normal font-family-3 line-height-p86 dynamic-value" data-active="15" data-monthly="89" data-yearly="999"></h2>
-                  </div>
-                  <span class="text-dovegray font-size-4 font-weight-normal letter-spacing-np43 dynamic-value" data-active="per month" data-monthly="per month" data-yearly="per year"></span>
-                </div>
-                <!-- main-price end -->
-                <!-- price-body start -->
-                <div class="price-body pt-8 px-xl-11 px-lg-7 px-11">
-                  <ul class="pricing-list with-check-icon letter-spacing-np42 list-unstyled font-size-4 mb-14 border-murcery-2 border-bottom pb-6">
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Unlimited Blocks</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> 5GB Clould Storages</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8"> Custom Domain Names</li>
-                    <li class="font-size-5 heading-default-color letter-spacing-np76 font-weight-normal font-family-3 mb-8">Unlimited Emails</li>
-                  </ul>
-                </div>
-                <!-- price-body end -->
-                <!-- price-btn start -->
-                <div class="price-btn">
-                  <a class="btn btn-mineshaft-2 rounder-3 btn-lg-2 font-size-7 letter-spacing-np4 px-9 py-5 line-height-reset" href="#">Start Free Trial</a>
-                </div>
-                <!-- price-btn end -->
-              </div>
-              <!-- single-price end -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- cta-area start -->
-    <div class="pt-lg-0 pt-0" data-aos="fade-in" data-aos-duration="2000" data-aos-once="true">
-      <div class="container position-relative pt-25 pb-xl-15 pb-lg-11 pb-15">
-        <!-- bg-shape-img-3 start -->
-        <div class="bg-shape-img-3"></div>
-        <!-- bg-shape-img-3 end -->
-        <div class="row justify-content-center text-lg-left text-center">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-            <!-- cta content start -->
-            <div class="cta-content">
-              <h2 class="text-white font-family-3 font-weight-normal line-height-1p54 font-size-14 letter-spacing-n2p53 mb-8">Ready to get started?</h2>
-            </div>
-            <!-- cta content end -->
-          </div>
-          <div class="col-lg-3 text-lg-right text-center" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-            <!-- cta content btn start -->
-            <a class="btn btn-spring-green text-mineshaft-2 rounder-3 btn-lg-2 h-60px px-9 py-5 font-size-8 letter-spacing-np4 line-height-reset" href="#">Start Free Trial</a>
-            <!-- cta content btn end -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer section -->
-    <footer class="footer">
-      <div class="container pt-lg-30 pt-15 pb-lg-24 pb-8">
-        <div class="row mb-lg-0 justify-content-center">
-          <div class="col-lg-7 col-md-11 pl-lg-6 pl-6 mt-n2" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-            <div class="row mb-lg-0 mb-9">
-              <div class="col-sm-3 col-xs-6">
-                <div class="footer-widget widget2 mb-md-0 mb-13">
-                  <!-- footer widget title start -->
-                  <p class="widget-title font-size-4 text-dovegray letter-spacing-np32 mb-md-12 mb-7">Help menu</p>
-                  <!-- footer widget title end -->
-                  <!-- widget social menu start -->
-                  <ul class="widget-links pl-0 list-unstyled list-hover-primary">
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">About</a></li>
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">Features</a></li>
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">Works</a></li>
-                  </ul>
-                  <!-- widget social menu end -->
-                </div>
-              </div>
-              <div class="col-sm-4 col-xs-6 pl-lg-6 pl-md-9 pl-6">
-                <div class="footer-widget widget3 mb-sm-0 mb-13">
-                  <!-- widget social menu start -->
-                  <ul class="widget-links pl-0 list-unstyled list-hover-primary mt-md-18 mt-sm-12">
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">Contact </a></li>
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">Help & Support</a></li>
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">Privacy Policy</a></li>
-                  </ul>
-                  <!-- widget social menu end -->
-                </div>
-              </div>
-              <div class="col-sm-5 col-xs-6 px-xl-6 pl-lg-0 pl-md-15">
-                <div class="footer-widget widget4 mb-sm-0 mb-13">
-                  <!-- footer widget title start -->
-                  <p class="widget-title font-size-4 text-dovegray letter-spacing-np32 mb-md-12 mb-7">Products</p>
-                  <!-- footer widget title end -->
-                  <!-- widget social menu start -->
-                  <ul class="widget-links pl-0 list-unstyled list-hover-primary">
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">Essential Landing Page</a></li>
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">Alpha Dashboard Pro</a></li>
-                    <li class="mb-4"><a class="text-black letter-spacing-n6 font-size-5 font-weight-normal letter-spacing-np6" href="">Karnel Admin Dashboard</a></li>
-                  </ul>
-                  <!-- widget social menu end -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-8 col-sm-11 mb-lg-0 mb-9 pl-xl-12" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
-            <div class="bg-panache px-9 pt-7 pb-11 rounded-5">
-              <!-- footer subscribe text start -->
-              <p class="font-size-4 letter-spacing-np32 line-height-3 text-dovegray mb-1">Subscribe to our newsletter</p>
-              <!-- footer subscribe text End -->
-              <!-- media start -->
-              <div class="media mb-5">
-                <h6 class="font-size-5 font-weight-normal text-black font-family-3">Subscribe to get lastest offers, news and events announcements. No spam in your inbox.</h6>
-              </div>
-              <!-- media end -->
-              <!-- input-group start -->
-              <div class="input-group">
-                <!-- form-control start -->
-                <input type="text" class="form-control h-56px pl-7 font-size-4 text-dovegray" placeholder="Enter your email address" aria-label="">
-                <!-- form-control end -->
-                <!-- button start -->
-                <div class="input-group-append">
-                  <button class="btn-emerald h-100 w-60px border-0 focus-reset line-height-reset rounded-left-0 rounded-right-5" type="button">
-                    <i class="icon icon-tail-right text-white font-size-8 font-weight-bold"></i>
-                  </button>
-                </div>
-                <!-- button start -->
-              </div>
-              <!-- input-group end -->
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
-  </div>
-  <!-- Vendor Scripts -->
-  <script src="js/vendor.min.js"></script>
-  <!-- Plugin's Scripts -->
-  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-  <script src="plugins/nice-select/jquery.nice-select.min.js"></script>
-  <script src="plugins/aos/aos.min.js"></script>
-  <script src="plugins/slick/slick.min.js"></script>
-  <script src="./plugins/counter-up/jquery.waypoints.js"></script>
-  <script src="./plugins/counter-up/jquery.counterup.js"></script>
-  <script src="plugins/theme-mode-switcher/gr-theme-mode-switcher.js"></script>
-  <!-- Activation Script -->
-  <script src="js/custom.js"></script>
-</body>
-
+    <!-- Vendor Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <!-- Plugin's Scripts -->
+    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="plugins/nice-select/jquery.nice-select.min.js"></script>
+    <script src="plugins/aos/aos.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="./plugins/counter-up/jquery.waypoints.js"></script>
+    <script src="./plugins/counter-up/jquery.counterup.js"></script>
+    <script src="plugins/theme-mode-switcher/gr-theme-mode-switcher.js"></script>
+    <!-- Activation Script -->
+    <script src="js/custom.js"></script>
+  </body>
 </html>

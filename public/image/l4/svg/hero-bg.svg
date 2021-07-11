@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="781" viewBox="0 0 1920 781"><g><g><path fill="#14ee80" d="M0 0h1920v570.204a210 210 0 0 1-217.561 209.864L0 718.73z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="780" viewBox="0 0 1920 780">  
+      <defs>
+        <linearGradient id="linear-gradient" x1="0" y1="0" x2="75%" y2="25%" >
+                   <stop offset="0" stop-color="9988ff">
+                <animate attributeName="stop-color" values="#92dff3;#9988ff" dur="4.5s" repeatCount="indefinite"  /> 
+            </stop>
+           <stop offset="1" stop-color="#92dff3">
+           <animate attributeName="stop-color" values="#9988ff;#92dff3" dur="4.5s" repeatCount="indefinite"  /> 
+            </stop>
+            </linearGradient>
+    </defs>
+<path fill="url(#linear-gradient)"  d="M0 0h1920v570.204a210 210 0 0 1-217.561 209.864L0 718.73z"/> 
+</svg>

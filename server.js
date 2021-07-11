@@ -1,4 +1,5 @@
 const cors = require('cors');
+const fetch = require('node-fetch');
 const express = require('express');
 const path = require('path');
 var bodyParser = require('body-parser')
@@ -48,6 +49,21 @@ app.use(cookieParser());
 // app.use(passport.initialize());
 // app.use(passport.session());
 
+// problem: the React Native Client can't ask google apis to get the list of contacts because google gets angry due to CORS
+// solution: the react native client can ask the server to get a list of contacts from google, and send it to the frontend
+// TODO: every user needs a default nest called unassigned. take all the contacts from gmail, filter them, and dump them into unassigned.
+app.get('/askGoogleToGetContacts', async function(req,res) {
+  try {
+    const token = req.query['access_token']
+    let response = await fetch("https://people.googleapis.com/v1/people/me/connections?personFields=emailAddresses&access_token="+token)
+    response = await response.text();
+    console.log("3. response", response)
+    res.json(response)
+  } catch (err) {
+    console.log("error", err)
+    res.json({"error": err})
+  }
+})
 
 // routers
 let usersRouter = require('./routes/users');

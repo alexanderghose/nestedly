@@ -30,20 +30,22 @@ Assigned to:    Grayic
 |--- THEME CUSTOM STYLES
 
 ******************************************************/
-@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body[data-theme='dark'], .dark-bg, .dark-mode-texts {
   --bg:                 #19191b;
   --bg-1:               #1e1e20;
@@ -337,6 +339,13 @@ body[data-theme='light'] .dark-mode-texts .light-shape.default-shape, .light-mod
   }
 }
 
+.hero-img {
+  display: block;
+  margin: 90px ;
+  width: 850px;
+
+ 
+}
 .header-btn a.btn-1 {
   min-height: 40px !important;
   height: 40px;
@@ -368,6 +377,26 @@ body[data-theme='light'] .dark-mode-texts .light-shape.default-shape, .light-mod
   background: transparent;
   border: 1px solid transparent;
 }
+
+.circle-icon {
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    padding: auto;
+
+}
+
+.fab {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+
+}
+
 
 .header-btns .btn-small {
   min-width: 85px !important;
@@ -439,7 +468,10 @@ body[data-theme='light'] .dark-mode-texts .light-shape.default-shape, .light-mod
   color: #353638;
 }
 
+
+
 .site-header--absolute {
+  background-color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -495,6 +527,34 @@ body[data-theme='light'] .dark-mode-texts .light-shape.default-shape, .light-mod
   .site-header--menu-center .navbar-nav-wrapper {
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
+    display: flex;
+
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container1 {
+    flex-direction: column;
+  }
+.left {
+    order: 2;
+  }
+.right {
+    order: 1;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container1 {
+    flex-direction: column;
+  }
+.left {
+    order: 2;
+  }
+.right {
+    order: 1;
   }
 }
 
@@ -513,8 +573,10 @@ body[data-theme='light'] .dark-mode-texts .light-shape.default-shape, .light-mod
 }
 
 .site-header--menu-left .navbar-nav-wrapper .navbar-nav {
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   padding-left: 45px;
+  margin: auto;
 }
 
 @media (max-width: 767px) {
@@ -663,6 +725,7 @@ Custom toggle arrow
   .main-menu {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
 }
 
@@ -1159,7 +1222,7 @@ Custom toggle arrow
 
 @media (min-width: 320px) and (max-width: 992px) {
   .offcanvas-active.navbar-expand-lg .navbar-collapse {
-    display: block;
+    display: inline-block;
     position: fixed;
     top: 0;
     background: var(--bg);
@@ -1173,6 +1236,7 @@ Custom toggle arrow
     padding-top: 50px;
     width: 250px;
     overflow-y: auto;
+    margin:auto;
   }
 }
 
@@ -1744,7 +1808,9 @@ button.offcanvas-btn-close:focus {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-right: -90px;
+    display: inline-flex;
   }
 }
 
@@ -1879,9 +1945,9 @@ button.offcanvas-btn-close:focus {
   border: 0;
 }
 
-.btn-emerald {
+.btn-lavender {
   color: #fff !important;
-  background: #4ebe86 !important;
+  background: #9988ff !important;
 }
 
 /* ---------------------------
@@ -2448,17 +2514,21 @@ button.offcanvas-btn-close:focus {
 
 .bg-shape-4 {
   background: url(../image/l4/svg/hero-bg.svg);
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   position: absolute;
   top: -15px;
   height: 100%;
-  width: 100%;
+width: 100%;
   left: 0;
   transform: rotate(0deg);
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
+
+  /*background-color: #9988ff;
+  background-image: linear-gradient(315deg, #405ee0  10%,#9988ff 80%);*/
+
 }
 
 .bg-shape-5 {
@@ -2521,42 +2591,77 @@ button.offcanvas-btn-close:focus {
   }
 }
 
+
 .bg-shape-img-3 {
+  background-image: linear-gradient(to bottom right ,#9988ff, #92dff3 );
+  opacity:100%;
+  border-radius:25px;
+  max-width: auto;
   height: 100%;
-  background: url(../image/l4/png/cta-bg.png);
-  background-size: cover;
+  width: 100%;
+  margin: auto;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: left bottom;
-  width: 97%;
-  position: absolute;
-  top: 0;
+  background-size: cover;
+  position:relative; 
+  text-align: center;
+  top: 0
 }
 
+
+.marketing {
+  display:inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+  text-align: center;
+  padding: auto;
+
+}
+
+.marketingbtn{
+max-width: 300px;
+vertical-align: middle;
+
+
+
+  
+
+}
 @media (max-width: 767px) {
   .bg-shape-img-3 {
     background-position: center right;
-    width: 100%;
+    width: 250%;
     left: 0;
   }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
   .bg-shape-img-3 {
-    background-position: center left;
+    background-position:center right;
+ 
+
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 767px) {
   .bg-shape-img-3 {
     background-size: contain;
   }
 }
+
+
+
+
 
 .bg-shape-img-5 {
   height: 100%;
   background: url(../image/l8/png/hero-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .section-bg-img-1 {
@@ -2660,7 +2765,7 @@ button.offcanvas-btn-close:focus {
 }
 
 .btn-toggle-2[data-pricing-trigger].active:before {
-  color: #000 !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .btn-toggle-2[data-pricing-trigger].active:after {
@@ -2745,7 +2850,7 @@ button.offcanvas-btn-close:focus {
   height: 34px;
   top: 3px;
   left: 4px;
-  background: blue;
+  background: #9988ff;
   display: block;
   z-index: -1;
 }
@@ -2814,7 +2919,7 @@ button.offcanvas-btn-close:focus {
 .popular-pricing.popular-pricing-2:before {
   height: 3px;
   top: -3px;
-  background: #14ee80;
+  background: #9988ff;
 }
 
 .popular-pricing.popular-pricing-3:before {
@@ -5402,43 +5507,43 @@ button.offcanvas-btn-close:focus {
 }
 
 .bg-panache-opacity-visible {
-  background-color: #e7f4ed;
+  background-color: #cec6fc;
 }
 
 .bg-panache-opacity-1 {
-  background-color: rgba(231, 244, 237, 0.1);
+  background-color: rgb(218, 212, 250);
 }
 
 .bg-panache-opacity-2 {
-  background-color: rgba(231, 244, 237, 0.2);
+  background-color: #cec6fc;
 }
 
 .bg-panache-opacity-3 {
-  background-color: rgba(231, 244, 237, 0.3);
+  background-color: #cec6fc;
 }
 
 .bg-panache-opacity-4 {
-  background-color: rgba(231, 244, 237, 0.4);
+  background-color: #cec6fc;
 }
 
 .bg-panache-opacity-5 {
-  background-color: rgba(231, 244, 237, 0.5);
+  background-color: #cec6fc;
 }
 
 .bg-panache-opacity-6 {
-  background-color: rgba(231, 244, 237, 0.6);
+  background-color: #cec6fc;
 }
 
 .bg-panache-opacity-7 {
-  background-color: rgba(231, 244, 237, 0.7);
+  background-color: #cec6fc;
 }
 
 .bg-panache-opacity-8 {
-  background-color: rgba(231, 244, 237, 0.8);
+  background-color: #cec6fc;
 }
 
 .bg-panache-opacity-9 {
-  background-color: rgba(231, 244, 237, 0.9);
+  background-color: #cec6fc;
 }
 
 .gr-color-panache-opacity-visible {
@@ -9872,6 +9977,7 @@ button.offcanvas-btn-close:focus {
   }
 }
 
+
 @media (min-width: 992px) {
   .row-lg {
     display: flex;
@@ -10979,7 +11085,7 @@ p {
 }
 
 .font-family-3 {
-  font-family: "Rubik";
+  font-family: "Heebo", sans-serif;
 }
 
 .font-family-4 {
@@ -10999,7 +11105,7 @@ p {
 }
 
 .font-family-fontName {
-  font-family: "Karla", sans-serif;
+  font-family: "Heebo", sans-serif;
 }
 
 .font-weight-semibold {
@@ -12452,7 +12558,7 @@ a.hover-color-primary:hover {
   background: rgba(39, 128, 255, 0.9);
 }
 
-.btn-text-border-bottom {
+.text-border-bottom {
   border-bottom: 2px solid #2780ff;
 }
 

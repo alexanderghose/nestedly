@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -94,6 +95,7 @@
   --yellow-green: #b8e986;
   --tan-hide: #f69f51;
   --heliotrope: #9e84ff;
+  --lavender:#9988ff;
   --purple-heart: #5029de;
   --heliotrope-2: #a665fb;
   --dodgerblue3: #4482ff;
@@ -129,7 +131,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -141,7 +143,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Karla", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4358,7 +4360,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-family: "Karla", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: var(--color-texts);
   text-align: center;
@@ -5669,6 +5671,8 @@ fieldset:disabled a.btn {
   border-color: #14ee80;
 }
 
+
+
 .btn-spring-green:hover {
   color: #fff;
   background-color: #0fcd6d;
@@ -5699,6 +5703,46 @@ fieldset:disabled a.btn {
 .show > .btn-spring-green.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(22, 208, 115, 0.5);
 }
+
+.btn-lavender {
+  color: #212529;
+  background-color: #8373df;
+  border-color: #8514ee;
+}
+
+
+
+.btn-lavender:hover {
+  color: #fff;
+  background-color: #0fcd6d;
+  border-color: #0ec167;
+}
+
+.btn-lavender:focus, .btn-lavender.focus {
+  color: #fff;
+  background-color: #0fcd6d;
+  border-color: #0ec167;
+  box-shadow: 0 0 0 0.2rem rgba(22, 208, 115, 0.5);
+}
+
+.btn-lavender.disabled, .btn-lavender:disabled {
+  color: #ffffff;
+  background-color: #14ee80;
+  border-color: #14ee80;
+}
+
+.btn-lavender:not(:disabled):not(.disabled):active, .btn-lavender:not(:disabled):not(.disabled).active,
+.show > .btn-lavender.dropdown-toggle {
+  color: #fff;
+  background-color: #0ec167;
+  border-color: #0db560;
+}
+
+.btn-lavender:not(:disabled):not(.disabled):active:focus, .btn-lavender:not(:disabled):not(.disabled).active:focus,
+.show > .btn-lavender.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(22, 208, 115, 0.5);
+}
+
 
 .btn-dustygray {
   color: #212529;
@@ -5737,40 +5781,40 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(133, 134, 135, 0.5);
 }
 
-.btn-emerald {
+.btn-lavender {
   color: #212529;
   background-color: #4ebe86;
-  border-color: #4ebe86;
+  border-color: #7e69f8;
 }
 
-.btn-emerald:hover {
+.btn-lavender:hover {
   color: #fff;
   background-color: #3ea873;
-  border-color: #3a9f6d;
+  border-color: #7e69f8;
 }
 
-.btn-emerald:focus, .btn-emerald.focus {
+.btn-lavender:focus, .btn-lavender.focus {
   color: #fff;
   background-color: #3ea873;
-  border-color: #3a9f6d;
+  border-color: #7e69f8;
   box-shadow: 0 0 0 0.2rem rgba(71, 167, 120, 0.5);
 }
 
-.btn-emerald.disabled, .btn-emerald:disabled {
+.btn-lavender.disabled, .btn-lavender:disabled {
   color: #212529;
   background-color: #4ebe86;
-  border-color: #4ebe86;
+  border-color: #7e69f8;
 }
 
-.btn-emerald:not(:disabled):not(.disabled):active, .btn-emerald:not(:disabled):not(.disabled).active,
-.show > .btn-emerald.dropdown-toggle {
+.btn-lavender:not(:disabled):not(.disabled):active, .btn-lavender:not(:disabled):not(.disabled).active,
+.show > .btn-lavender.dropdown-toggle {
   color: #fff;
   background-color: #3a9f6d;
-  border-color: #379566;
+  border-color: #7e69f8;
 }
 
-.btn-emerald:not(:disabled):not(.disabled):active:focus, .btn-emerald:not(:disabled):not(.disabled).active:focus,
-.show > .btn-emerald.dropdown-toggle:focus {
+.btn-lavender:not(:disabled):not(.disabled):active:focus, .btn-lavender:not(:disabled):not(.disabled).active:focus,
+.show > .btn-lavender.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(71, 167, 120, 0.5);
 }
 
@@ -16992,7 +17036,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Karla", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -17105,7 +17149,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Karla", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -17869,13 +17913,13 @@ button.bg-blueribbon:focus {
 }
 
 .bg-panache {
-  background-color: #e7f4ed !important;
+  background-color: #cec6fc !important;
 }
 
 a.bg-panache:hover, a.bg-panache:focus,
 button.bg-panache:hover,
 button.bg-panache:focus {
-  background-color: #c4e4d3 !important;
+  background-color: #cec6fc !important;
 }
 
 .bg-blueribbon-2 {
@@ -17982,11 +18026,23 @@ button.bg-white:focus {
   background-color: #000000 !important;
 }
 
+
 a.bg-black:hover, a.bg-black:focus,
 button.bg-black:hover,
 button.bg-black:focus {
   background-color: black !important;
 }
+
+.bg-lavender {
+  background-color: #9988ff !important;
+}
+
+a.bg-lavender:hover, a.bg-lavender:focus,
+button.bg-lavender:hover,
+button.bg-lavender:focus {
+  background-color: black !important;
+}
+
 
 .bg-bigstone {
   background-color: #192f48 !important;
@@ -33375,12 +33431,12 @@ a.text-panache:hover, a.text-panache:focus {
   color: #b3dcc6 !important;
 }
 
-.text-blueribbon-2 {
-  color: #0c39f8 !important;
+.text-lavender{
+  color:  #6248f5 !important;
 }
 
-a.text-blueribbon-2:hover, a.text-blueribbon-2:focus {
-  color: #0526b2 !important;
+a.text-lavender:hover, a.text-lavender:focus {
+  color: #9988ff !important;
 }
 
 .text-spring-green {
