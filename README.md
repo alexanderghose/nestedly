@@ -1,5 +1,6 @@
 totally not a contactually clone
 ## Instructions to Run Server
+1. npm i
 1. nodemon server.js
 1. in a browser, type localhost:3001 to see a list of working backend features
 1. To add a contact, navigate on your browser to http://localhost:3001/api/contacts/create

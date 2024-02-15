@@ -17,8 +17,9 @@ module.exports = {
 async function getContacts(req, res) {
     if (req.user) {
         let currentUser = await UserModel.findById(req.user._id)
-        console.log(currentUser.contacts)
-        res.json(currentUser.contacts)
+        console.log("user",currentUser)
+        console.log("contacts:",currentUser.contacts)
+        res.json(currentUser.contacts ? currentUser.contacts : "no contacts yet.")
     } else {
         res.send("cannot get contacts. please <a href='/api/auth/google'>login</a>.")
     }
@@ -55,11 +56,12 @@ async function AddOneNest(req, res) {
 //April 10th - Refactored this to look inside the body of requests instead of at a user header
 //Assert "user without assigned nests" - Expected "[]" -Got "[]"
 async function getNests(req, res) {
-    if (req.body.user) {
+    if (req.user) {
         //let currentUser = await UserModel.findById(req.user.id)
-        console.log(req.body.user)
-        let userNests = await NestModel.find({ user: req.body.id })
-        res.json(userNests)
+        //console.log(req.body.user)
+        //let userNests = await NestModel.find({ user: req.user.id })
+        console.log("nests",req.user.nests)
+        res.json(req.user.nests ? req.user.nests : "no nests yet.")
     } else {
         res.send("cannot get nests. please <a href='/api/auth/google'>login</a>.")
     }

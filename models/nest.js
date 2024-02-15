@@ -7,7 +7,7 @@ const nestSchema = new Schema({
   frequency: Number, // contact frequency for each member of this nest (in days)
   colour: String,
   tags: [String],
-  user: [contactSchema]
+  contacts: [contactSchema]
 }, {
   timestamps: true
 });
