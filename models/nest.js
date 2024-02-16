@@ -3,8 +3,14 @@ const Schema = mongoose.Schema;
 const contactSchema = require('./contact').contactSchema;
 
 const nestSchema = new Schema({
-  name: String,
-  frequency: Number, // contact frequency for each member of this nest (in days)
+  name: {
+    type: String,
+    required: true,
+  },
+  frequency: {
+    type: Number,
+    required: true,
+  }, // contact frequency for each member of this nest (in days)
   colour: String,
   tags: [String],
   contacts: [contactSchema]

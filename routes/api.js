@@ -9,9 +9,11 @@ router.use(require('../config/auth')); // <------- auth middleware: grabs the JW
 router.get('/contacts', apiCtrl.getContacts)
 router.post('/contacts', apiCtrl.postContact) // full route example: POST /api/contacts
 router.get('/nests', apiCtrl.getNests)
-//router.post('/nests', apiCtrl.postNest)
+router.post('/nests', apiCtrl.postNest)
+router.get('/followups', apiCtrl.getFollowUpList)
+
 //Refactored User/Nest data model routes
-router.post('/nests', apiCtrl.AddOneNest)
+// router.post('/nests', apiCtrl.AddOneNest)
 
 // full route: POST /api/assign_nest_to_contact    has the following prereqs:
 // (1) logged in user

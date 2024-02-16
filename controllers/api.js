@@ -1,5 +1,5 @@
 const express = require('express');
-let NestModel = require('../models/nest');
+let NestModel = require('../models/nest').NestModel;
 let ContactModel = require('../models/contact').ContactModel;
 let UserModel = require('../models/user');
 const User = require('../models/user');
@@ -12,6 +12,37 @@ module.exports = {
     assignNestToContact,
     AddOneNest, 
     fetchUserData,
+    getFollowUpList,
+}
+
+async function getFollowUpList(req, res) {
+    // for every contact in every nest,
+    // lastContactedDays: the lastContacted (required) attribute with today's date
+    // cf. with nest.frequency
+    try {
+        let currentUser = await UserModel.findById(req.user._id)
+        let followUpList = []
+        for (let nest of currentUser.nests) {
+            for (let contact of nest.contacts) {
+                let today = new Date()
+                let lastContactedDate = new Date(contact.lastContacted)
+                let lastContactedDays = Math.trunc(Math.floor(today - lastContactedDate) / (1000 * 60 * 60 * 24))
+                console.log("last contacted days", lastContactedDays)
+                let freq = nest.frequency;
+                console.log("freq", freq)
+                if (lastContactedDays > freq) {
+                    followUpList.push({
+                        name: contact.name,
+                        freq: nest.frequency,
+                        lastContactedDays,
+                    })
+                }
+            }
+        }
+        res.json(followUpList)
+    } catch (err) {
+        res.send(err)
+    }
 }
 
 async function getContacts(req, res) {
@@ -27,15 +58,33 @@ async function getContacts(req, res) {
 
 async function postContact(req, res) { // create a contact.
     try {
-        let user = await UserModel.findById(req.body.userID);
-        let targetNest = user.nests.id(req.body.nestID);
-
-        targetNest.user.push(req.body.contact);
-        await user.save();
+        console.log("formdata",req.body)
+        let user = await UserModel.findById(req.user._id);
+        console.log("user", user)
+        let targetNest = null;
+        if (req.body.nestID) {
+            targetNest = user.nests.id(req.body.nestID);
+        } else if (req.body.nestName) {
+            //targetNest = user.nests.find({'name': req.body.nestName})
+            for (let nest of user.nests) {
+                if (nest.name == req.body.nestName) {
+                    targetNest = nest;
+                }
+            }
+        } else {
+            throw new Error("nestID or nestName not specified")
+        }
+        if (!targetNest) {
+            throw new Error("nestID or nestName not found")
+        }
+        let newContact = await ContactModel.create(req.body)
+        targetNest.contacts.push(newContact);
+        await user.save()
     
-        res.send(user)
+        res.send("done")
     }
     catch (err) {
+        console.log("err adding contact to nest", err)
         res.send(err)
     }
 }
@@ -69,15 +118,16 @@ async function getNests(req, res) {
 
 //April 10th - Refactored this to look inside the body of requests instead of at a user header
 async function postNest(req, res) { // create a nest.
+    console.log("formdata",req.body)
     try {
         let result = await NestModel.create({
             name: req.body.name,
             frequency: req.body.frequency,
-            user: {
-                type: UserModel,
-                ref: req.body.id
-            }
+            colour: req.body.colour,
         });
+        let user = await UserModel.findById(req.user._id)
+        user.nests.push(result)
+        await user.save()
         res.json(
             {
                 Status: "Nest Added",
@@ -89,6 +139,7 @@ async function postNest(req, res) { // create a nest.
         // res.redirect('/api/contacts');
         // });
     } catch (err) {
+        console.log('nest creation failed', err)
         res.send(err)
     }
 }
